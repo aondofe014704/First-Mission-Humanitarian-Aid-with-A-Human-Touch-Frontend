@@ -12,6 +12,7 @@ interface User {
 }
 
 interface AuthState {
+    // Authentication-related state
     user: User | null;
     accessToken: string | null;
     refreshToken: string | null;
@@ -19,12 +20,20 @@ interface AuthState {
     isLoading: boolean;
     error: string | null;
 
+    // UI modal control state
+    isAuthModalOpen: boolean;
+    modalType: 'login' | 'register' | null;
+
     // Actions
     login: (email: string, password: string) => Promise<boolean>;
     register: (data: RegisterData) => Promise<boolean>;
     logout: () => void;
     refreshAccessToken: () => Promise<boolean>;
     clearError: () => void;
+
+    // Modal control methods
+    openAuthModal: (type: 'login' | 'register') => void;
+    closeAuthModal: () => void;
 }
 
 interface RegisterData {
@@ -43,6 +52,7 @@ interface LoginResponse {
 export const useAuthStore = create<AuthState>()(
     persist(
         (set, get) => ({
+            // initial state
             user: null,
             accessToken: null,
             refreshToken: null,
@@ -50,15 +60,22 @@ export const useAuthStore = create<AuthState>()(
             isLoading: false,
             error: null,
 
-            login: async (email: string, password: string) => {
-                set({ isLoading: true, error: null });
+            // Modal control state
+            isAuthModalOpen: false,
+            modalType: null,
 
+            // Modal control functions
+            openAuthModal: (type) => set({ isAuthModalOpen: true, modalType: type }),
+            closeAuthModal: () => set({ isAuthModalOpen: false, modalType: null }),
+
+            // Auth actions
+            login: async (email, password) => {
+                set({ isLoading: true, error: null });
                 try {
                     const response = await axios.post<LoginResponse>(`${BASE_URL}/api/jwt/create/`, {
                         email,
                         password,
                     });
-
                     const { access, refresh, user } = response.data;
 
                     set({
@@ -70,7 +87,7 @@ export const useAuthStore = create<AuthState>()(
                         error: null,
                     });
 
-                    // Set default authorization header
+                    // Set default Authorization header
                     axios.defaults.headers.common['Authorization'] = `Bearer ${access}`;
 
                     return true;
@@ -83,15 +100,12 @@ export const useAuthStore = create<AuthState>()(
                 }
             },
 
-            register: async (data: RegisterData) => {
+            register: async (data) => {
                 set({ isLoading: true, error: null });
-
                 try {
                     await axios.post(`${BASE_URL}/api/register/`, data);
-
-                    // Auto-login after successful registration
+                    // Auto-login after registration
                     const loginSuccess = await get().login(data.email, data.password);
-
                     set({ isLoading: false });
                     return loginSuccess;
                 } catch (error: any) {
@@ -111,29 +125,22 @@ export const useAuthStore = create<AuthState>()(
                     isAuthenticated: false,
                     error: null,
                 });
-
-                // Remove authorization header
                 delete axios.defaults.headers.common['Authorization'];
             },
 
             refreshAccessToken: async () => {
                 const { refreshToken } = get();
-
                 if (!refreshToken) {
                     get().logout();
                     return false;
                 }
-
                 try {
                     const response = await axios.post(`${BASE_URL}/api/jwt/refresh/`, {
                         refresh: refreshToken,
                     });
-
                     const { access } = response.data;
-
                     set({ accessToken: access });
                     axios.defaults.headers.common['Authorization'] = `Bearer ${access}`;
-
                     return true;
                 } catch (error) {
                     get().logout();
@@ -142,6 +149,7 @@ export const useAuthStore = create<AuthState>()(
             },
 
             clearError: () => set({ error: null }),
+
         }),
         {
             name: 'auth-storage',
