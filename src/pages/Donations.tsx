@@ -87,7 +87,7 @@ const Donations = () => {
                 }
             );
 
-            const { public_key, email, name, amount } = response.data;
+            const { public_key, email, amount } = response.data;
 
             // Initialize Paystack
             const PaystackPop = (window as any).PaystackPop;

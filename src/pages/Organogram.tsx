@@ -1,223 +1,107 @@
-import React from 'react';
-import { Users, User, Building2, ChevronDown } from 'lucide-react';
+import React from 'react'
+import { Users, User, Building2, ChevronDown } from 'lucide-react'
+
+interface OrgLevel {
+    level: number
+    title: string
+    positions: string[]
+}
+
+interface OrganogramSectionProps {
+    title: string
+    structure: OrgLevel[]
+    icon: React.ReactNode
+}
 
 const Organogram = () => {
-    const operationsStructure = [
+    const operationsStructure: OrgLevel[] = [
+        { level: 1, title: "Board of Directors (BOD)", positions: ["Board of Directors"] },
+        { level: 2, title: "Executive Leadership", positions: ["Chief Executive Officer (CEO)"] },
+        { level: 3, title: "Senior Management", positions: ["Country Programs and Operations Director"] },
+        { level: 4, title: "Regional Leadership", positions: ["Regional Programs and Operations Directors"] },
         {
-            level: 1,
-            title: "Board of Directors (BOD)",
-            positions: ["Board of Directors"]
-        },
-        {
-            level: 2,
-            title: "Executive Leadership",
-            positions: ["Chief Executive Officer (CEO)"]
-        },
-        {
-            level: 3,
-            title: "Senior Management",
-            positions: ["Country Programs and Operations Director"]
-        },
-        {
-            level: 4,
-            title: "Regional Leadership",
-            positions: ["Regional Programs and Operations Directors"]
-        },
-        {
-            level: 5,
-            title: "Coordinators",
-            positions: [
-                "Grant And Reporting Coordinator",
-                "Finance and Compliance Coordinator",
-                "Supply Chain Coordinator",
-                "M&E Coordinator",
-                "HR/Admin Coordinator",
-                "Security Networking Coordinator",
-                "ICT Coordinator",
-                "Communication and Engagement Coordinator",
-                "Gender and PSEA Coordinator",
-                "Knowledge Management Coordinator"
+            level: 5, title: "Coordinators", positions: [
+                "Grant And Reporting Coordinator", "Finance and Compliance Coordinator", "Supply Chain Coordinator", "M&E Coordinator",
+                "HR/Admin Coordinator", "Security Networking Coordinator", "ICT Coordinator", "Communication and Engagement Coordinator",
+                "Gender and PSEA Coordinator", "Knowledge Management Coordinator"
             ]
         },
         {
-            level: 6,
-            title: "Senior Officers",
-            positions: [
-                "Senior Grant and Reporting Officer",
-                "Senior Finance and Compliance Officer",
-                "Senior Logistics Officer",
-                "Senior Procurement Officer",
-                "Senior M&E Officer",
-                "Senior AAP/Complaint and Feedback Officer",
-                "Senior HR/Admin Officer",
-                "Senior Security Networking Officer",
-                "Senior ICT Officer",
-                "Senior Communication and Engagement Officer",
-                "Senior Gender and PSEA Officer",
-                "Senior Knowledge Management Officer"
+            level: 6, title: "Senior Officers", positions: [
+                "Senior Grant and Reporting Officer", "Senior Finance and Compliance Officer", "Senior Logistics Officer",
+                "Senior Procurement Officer", "Senior M&E Officer", "Senior AAP/Complaint and Feedback Officer", "Senior HR/Admin Officer",
+                "Senior Security Networking Officer", "Senior ICT Officer", "Senior Communication and Engagement Officer",
+                "Senior Gender and PSEA Officer", "Senior Knowledge Management Officer"
             ]
         },
         {
-            level: 7,
-            title: "Officers",
-            positions: [
-                "Grant and Reporting Officer",
-                "Finance and Compliance Officer",
-                "Logistics Officer",
-                "Procurement Officer",
-                "M&E Officer",
-                "AAP/Complaint and Feedback Officer",
-                "HR/Admin Officer",
-                "Security Networking Officer",
-                "ICT Officer",
-                "Communication and Engagement Officer",
-                "Gender and PSEA Officer",
-                "Knowledge Management Officer"
+            level: 7, title: "Officers", positions: [
+                "Grant and Reporting Officer", "Finance and Compliance Officer", "Logistics Officer", "Procurement Officer", "M&E Officer",
+                "AAP/Complaint and Feedback Officer", "HR/Admin Officer", "Security Networking Officer", "ICT Officer",
+                "Communication and Engagement Officer", "Gender and PSEA Officer", "Knowledge Management Officer"
             ]
         },
         {
-            level: 8,
-            title: "Assistant Officers",
-            positions: [
-                "Assistant Grant and Reporting Officer",
-                "Assistant Finance and Compliance Officer",
-                "Assistant Logistics Officer",
-                "Assistant Procurement Officer",
-                "Assistant M&E Officer",
-                "Assistant AAP/Complaint and Feedback Officer",
-                "Assistant HR/Admin Officer",
-                "Assistant Security Networking Officer",
-                "Assistant ICT Officer",
-                "Assistant Communication and Engagement Officer",
-                "Assistant Gender and PSEA Officer",
-                "Assistant Knowledge Management Officer"
+            level: 8, title: "Assistant Officers", positions: [
+                "Assistant Grant and Reporting Officer", "Assistant Finance and Compliance Officer", "Assistant Logistics Officer",
+                "Assistant Procurement Officer", "Assistant M&E Officer", "Assistant AAP/Complaint and Feedback Officer",
+                "Assistant HR/Admin Officer", "Assistant Security Networking Officer", "Assistant ICT Officer",
+                "Assistant Communication and Engagement Officer", "Assistant Gender and PSEA Officer", "Assistant Knowledge Management Officer"
             ]
         },
-        {
-            level: 9,
-            title: "Support Staff",
-            positions: ["Interns", "Volunteers"]
-        }
-    ];
+        { level: 9, title: "Support Staff", positions: ["Interns", "Volunteers"] }
+    ]
 
-    const programmingStructure = [
+    const programmingStructure: OrgLevel[] = [
+        { level: 1, title: "Board of Directors (BOD)", positions: ["Board of Directors"] },
+        { level: 2, title: "Executive Leadership", positions: ["Chief Executive Officer (CEO)"] },
+        { level: 3, title: "Senior Management", positions: ["Country Programs and Operations Director"] },
+        { level: 4, title: "Regional Leadership", positions: ["Regional Programs and Operations Directors"] },
         {
-            level: 1,
-            title: "Board of Directors (BOD)",
-            positions: ["Board of Directors"]
-        },
-        {
-            level: 2,
-            title: "Executive Leadership",
-            positions: ["Chief Executive Officer (CEO)"]
-        },
-        {
-            level: 3,
-            title: "Senior Management",
-            positions: ["Country Programs and Operations Director"]
-        },
-        {
-            level: 4,
-            title: "Regional Leadership",
-            positions: ["Regional Programs and Operations Directors"]
-        },
-        {
-            level: 5,
-            title: "Program Coordinators",
-            positions: [
-                "Health and Nutrition Coordinator",
-                "WASH Coordinator",
-                "Programs Coordinator",
-                "Protection and Advocacy Coordinator",
-                "Women Empowerment and Advocacy Coordinator",
-                "Education Coordinator",
-                "Career Development and Research for International Development Coordinator",
-                "Food Security and Sustainability Coordinator",
-                "Livelihood and Early Recovery Coordinator"
+            level: 5, title: "Program Coordinators", positions: [
+                "Health and Nutrition Coordinator", "WASH Coordinator", "Programs Coordinator", "Protection and Advocacy Coordinator",
+                "Women Empowerment and Advocacy Coordinator", "Education Coordinator", "Career Development and Research for International Development Coordinator",
+                "Food Security and Sustainability Coordinator", "Livelihood and Early Recovery Coordinator"
             ]
         },
         {
-            level: 6,
-            title: "Senior Program Officers",
-            positions: [
-                "Senior Health Officer",
-                "Senior Nutrition Officer",
-                "Senior WASH Officer",
-                "Senior Programs Officer",
-                "Senior Protection Officer",
-                "Senior Child Protection Officer",
-                "Senior Women Empowerment and Advocacy Officer",
-                "Senior Education Officer",
-                "Senior Career Development and Research for International Development Officer",
-                "Senior Food Security and Sustainability Officer",
-                "Senior Livelihood and Early Recovery Officer"
+            level: 6, title: "Senior Program Officers", positions: [
+                "Senior Health Officer", "Senior Nutrition Officer", "Senior WASH Officer", "Senior Programs Officer",
+                "Senior Protection Officer", "Senior Child Protection Officer", "Senior Women Empowerment and Advocacy Officer",
+                "Senior Education Officer", "Senior Career Development and Research for International Development Officer",
+                "Senior Food Security and Sustainability Officer", "Senior Livelihood and Early Recovery Officer"
             ]
         },
         {
-            level: 7,
-            title: "Program Officers",
-            positions: [
-                "Health Officer",
-                "MHPSS Officer",
-                "SRH Officer",
-                "Nutrition Officer",
-                "WASH Officer",
-                "Programs Officer",
-                "Protection Officer",
-                "Child Protection Officer",
-                "GBV Officer",
-                "Women Empowerment and Advocacy Officer",
-                "Education Officer",
-                "Career Development Officer",
-                "Research for International Development Officer",
-                "Food Security and Sustainability Officer",
-                "Livelihood and Early Recovery Officer"
+            level: 7, title: "Program Officers", positions: [
+                "Health Officer", "MHPSS Officer", "SRH Officer", "Nutrition Officer", "WASH Officer", "Programs Officer",
+                "Protection Officer", "Child Protection Officer", "GBV Officer", "Women Empowerment and Advocacy Officer",
+                "Education Officer", "Career Development Officer", "Research for International Development Officer",
+                "Food Security and Sustainability Officer", "Livelihood and Early Recovery Officer"
             ]
         },
         {
-            level: 8,
-            title: "Assistant Program Officers",
-            positions: [
-                "Assistant Health Officer",
-                "Assistant MHPSS Officer",
-                "Assistant SRH Officer",
-                "Assistant Nutrition Officer",
-                "Assistant WASH Officer",
-                "Assistant Programs Officer",
-                "Assistant Protection Officer",
-                "Assistant Child Protection Officer",
-                "Assistant GBV Officer",
-                "Assistant Women Empowerment and Advocacy Officer",
-                "Assistant Education Officer",
-                "Assistant Career Development Officer",
-                "Assistant Research for International Development Officer",
-                "Assistant Food Security and Sustainability Officer",
-                "Assistant Livelihood and Early Recovery Officer"
+            level: 8, title: "Assistant Program Officers", positions: [
+                "Assistant Health Officer", "Assistant MHPSS Officer", "Assistant SRH Officer", "Assistant Nutrition Officer",
+                "Assistant WASH Officer", "Assistant Programs Officer", "Assistant Protection Officer", "Assistant Child Protection Officer",
+                "Assistant GBV Officer", "Assistant Women Empowerment and Advocacy Officer", "Assistant Education Officer",
+                "Assistant Career Development Officer", "Assistant Research for International Development Officer",
+                "Assistant Food Security and Sustainability Officer", "Assistant Livelihood and Early Recovery Officer"
             ]
         },
-        {
-            level: 9,
-            title: "Field Staff",
-            positions: ["Interns", "Community Volunteers", "Community Health Workers"]
-        }
-    ];
+        { level: 9, title: "Field Staff", positions: ["Interns", "Community Volunteers", "Community Health Workers"] }
+    ]
 
     const getLevelColor = (level: number) => {
         const colors = [
-            'bg-blue-800 text-white',
-            'bg-blue-700 text-white',
-            'bg-blue-600 text-white',
-            'bg-blue-500 text-white',
-            'bg-blue-400 text-white',
-            'bg-blue-300 text-gray-800',
-            'bg-blue-200 text-gray-800',
-            'bg-blue-100 text-gray-800',
-            'bg-gray-100 text-gray-800'
-        ];
-        return colors[level - 1] || 'bg-gray-100 text-gray-800';
-    };
+            'bg-blue-800 text-white', 'bg-blue-700 text-white', 'bg-blue-600 text-white',
+            'bg-blue-500 text-white', 'bg-blue-400 text-white', 'bg-blue-300 text-gray-800',
+            'bg-blue-200 text-gray-800', 'bg-blue-100 text-gray-800', 'bg-gray-100 text-gray-800'
+        ]
+        return colors[level - 1] || 'bg-gray-100 text-gray-800'
+    }
 
-    const OrganogramSection = ({ title, structure, icon }: { title: string, structure: any[], icon: React.ReactNode }) => (
+    const OrganogramSection = ({ title, structure, icon }: OrganogramSectionProps) => (
         <div className="mb-12">
             <div className="flex items-center justify-center mb-8">
                 {icon}
@@ -245,7 +129,7 @@ const Organogram = () => {
                 ))}
             </div>
         </div>
-    );
+    )
 
     return (
         <div className="min-h-screen bg-gray-50">
@@ -256,9 +140,7 @@ const Organogram = () => {
                     <p className="text-xl text-blue-200 max-w-3xl mx-auto">
                         Humanity First Mission for Children Women and the Disabled Populations (FIRST MISSION)
                     </p>
-                    <p className="text-lg italic text-blue-300 mt-2">
-                        "Humanitarian Aid with a Humane Touch"
-                    </p>
+                    <p className="text-lg italic text-blue-300 mt-2">"Humanitarian Aid with a Humane Touch"</p>
                 </div>
             </header>
 
@@ -298,7 +180,7 @@ const Organogram = () => {
                 </div>
             </main>
         </div>
-    );
-};
+    )
+}
 
-export default Organogram;
+export default Organogram
