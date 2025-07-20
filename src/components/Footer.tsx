@@ -77,13 +77,13 @@ const Footer = () => {
                             </p>
                         </div>
                         <div className="text-center sm:text-right">
-                            <p className="text-sm text-blue-300 flex flex-col items-start">
+                            <p className="text-sm text-blue-300 flex flex-row sm:flex-col items-center sm:items-start gap-1 sm:gap-0">
                                 <span>Designed by</span>
                                 <span className="font-semibold">Visual Status Nig Ltd</span>
                                 <span className="font-semibold">Reg No. 6911797</span>
                             </p>
-
                         </div>
+
                     </div>
                 </div>
             </div>

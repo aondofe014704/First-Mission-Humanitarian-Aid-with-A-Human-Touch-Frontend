@@ -1,26 +1,26 @@
 import { useState } from 'react';
-import { Menu, X, User, Heart, LogOut } from 'lucide-react';
+import { Menu, X,  Heart } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useAuthStore } from '../auth/authStore';
+// import { useAuthStore } from '../auth/authStore';
 import AuthModal from '../auth/AuthModal';
 
 const NavBar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [showAuthModal, setShowAuthModal] = useState(false);
-    const { isAuthenticated, user, logout } = useAuthStore();
+    // const { isAuthenticated, user, logout } = useAuthStore();
     const navigate = useNavigate();
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
-    const handleAuthClick = () => {
-        if (isAuthenticated) {
-            logout();
-        } else {
-            setShowAuthModal(true);
-        }
-    };
+    // const handleAuthClick = () => {
+    //     if (isAuthenticated) {
+    //         logout();
+    //     } else {
+    //         setShowAuthModal(true);
+    //     }
+    // };
 
     const handleDonateClick = () => {
         navigate('/donations');
@@ -117,7 +117,7 @@ const NavBar = () => {
                 id="mobile-menu"
                 className={`lg:hidden transition-all duration-300 ease-in-out ${
                     isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                } overflow-hidden bg-blue-700`}
+                } overflow-hidden bg-blue-900`}
             >
                 <div className="px-4 pt-2 pb-4 space-y-2">
                     <ul className="space-y-2">
@@ -145,25 +145,25 @@ const NavBar = () => {
                         >
                             DONATE NOW
                         </button>
-                        <button
-                            onClick={() => {
-                                handleAuthClick();
-                                setIsMenuOpen(false);
-                            }}
-                            className="w-full flex items-center justify-center space-x-2 text-white hover:bg-blue-800 px-4 py-2 rounded-md transition-colors duration-200"
-                        >
-                            {isAuthenticated ? (
-                                <>
-                                    <LogOut className="h-5 w-5" />
-                                    <span>Sign Out ({user?.name})</span>
-                                </>
-                            ) : (
-                                <>
-                                    <User className="h-5 w-5" />
-                                    <span>Sign In/Up</span>
-                                </>
-                            )}
-                        </button>
+                        {/*<button*/}
+                        {/*    onClick={() => {*/}
+                        {/*        handleAuthClick();*/}
+                        {/*        setIsMenuOpen(false);*/}
+                        {/*    }}*/}
+                        {/*    className="w-full flex items-center justify-center space-x-2 text-white hover:bg-blue-800 px-4 py-2 rounded-md transition-colors duration-200"*/}
+                        {/*>*/}
+                        {/*    {isAuthenticated ? (*/}
+                        {/*        <>*/}
+                        {/*            <LogOut className="h-5 w-5" />*/}
+                        {/*            <span>Sign Out ({user?.name})</span>*/}
+                        {/*        </>*/}
+                        {/*    ) : (*/}
+                        {/*        <>*/}
+                        {/*            <User className="h-5 w-5" />*/}
+                        {/*            <span>Sign In/Up</span>*/}
+                        {/*        </>*/}
+                        {/*    )}*/}
+                        {/*</button>*/}
                     </div>
                 </div>
             </div>
