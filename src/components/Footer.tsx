@@ -18,7 +18,7 @@ const Footer = () => {
                             Humanity First Mission for Children Women and the Disabled Populations
                         </h3>
                         <p className="text-blue-200 mb-4 max-w-md">
-                            "Humanitarian Aid with a Humane Touch" - Dedicated to providing humanitarian aid and support to vulnerable populations, particularly children, women, and people with disabilities, in Nigeria.
+                            "Humanitarian Aid with a Human Touch" - Dedicated to providing humanitarian aid and support to vulnerable populations, particularly children, women, and people with disabilities, in Nigeria.
                         </p>
                         <div className="space-y-2">
                             <div className="flex items-center space-x-2">
