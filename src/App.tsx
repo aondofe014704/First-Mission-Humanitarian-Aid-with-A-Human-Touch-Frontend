@@ -26,6 +26,10 @@ function App() {
         window.location.href = '/about';
     };
 
+    const handleDonations = () => {
+        window.location.href = '/donations'
+    }
+
     // const handleViewPrograms = () => {
     //     window.location.href = '/programs';
     // };
@@ -72,7 +76,7 @@ function App() {
                                                 <ArrowRight className="w-4 h-4" />
                                             </button>
                                             <button
-                                                onClick={() => (window.location.href = '/donations')}
+                                                onClick={handleDonations}
                                                 className="bg-blue-500 text-white px-5 py-2 text-sm lg:text-base rounded-full font-semibold hover:bg-blue-400 transition-colors duration-300 animate-pulse"
                                             >
                                                 DONATE NOW
