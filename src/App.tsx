@@ -11,31 +11,32 @@ import AuthModal from './auth/AuthModal';
 
 import { useAuthStore } from './auth/authStore';
 
-import { Heart, Users, Target, HandHeart, ArrowRight } from 'lucide-react';
+import { Users, Target, HandHeart, ArrowRight } from 'lucide-react';
+import StoriesSection from "./pages/StoriesSection.tsx";
 
 function App() {
     const {
         isAuthModalOpen,
         closeAuthModal,
-        openAuthModal,
-        user,
+        // openAuthModal,
+        // user,
     } = useAuthStore();
 
     const handleLearnMore = () => {
         window.location.href = '/about';
     };
 
-    const handleViewPrograms = () => {
-        window.location.href = '/programs';
-    };
+    // const handleViewPrograms = () => {
+    //     window.location.href = '/programs';
+    // };
 
-    const handleGetInvolved = () => {
-        if (user) {
-            alert('You are already part of our mission! Thank you for your support.');
-        } else {
-            openAuthModal('register');
-        }
-    };
+    // const handleGetInvolved = () => {
+    //     if (user) {
+    //         alert('You are already part of our mission! Thank you for your support.');
+    //     } else {
+    //         openAuthModal('register');
+    //     }
+    // };
 
     return (
         <Router>
@@ -48,37 +49,41 @@ function App() {
                         element={
                             <main>
                                 {/* Hero Section */}
-                                <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white py-20 px-4">
-                                    <div className="max-w-7xl mx-auto text-center">
-                                        <div className="flex justify-center mb-6">
-                                            <Heart className="w-16 h-16 text-white" />
+                                <section className="bg-gray-50 py-12 px-4">
+                                    <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
+
+                                        {/* Logo */}
+                                        <div className="flex-shrink-0 flex justify-center lg:justify-start w-full lg:w-auto">
+                                            <img
+                                                src="https://res.cloudinary.com/dgvjxhqjd/image/upload/v1752847535/WhatsApp_Image_2025-07-18_at_14.42.00_f65ea67b-removebg-preview_k1iyo0.png"
+                                                alt="First Mission Logo"
+                                                className="h-20 lg:h-24 w-auto"
+                                            />
+
                                         </div>
-                                        <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                                            Humanity First Mission
-                                        </h1>
-                                        <p className="text-xl md:text-2xl mb-4 opacity-90">
-                                            For Children, Women and the Disabled Populations
-                                        </p>
-                                        <p className="text-lg md:text-xl mb-8 opacity-80 italic">
-                                            "Humanitarian Aid with a Humane Touch"
-                                        </p>
-                                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+                                        {/* Buttons */}
+                                        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full lg:w-auto">
                                             <button
                                                 onClick={handleLearnMore}
-                                                className="bg-white text-blue-700 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-300 flex items-center justify-center gap-2"
+                                                className="bg-blue-600 text-white px-5 py-2 text-sm lg:text-base rounded-full font-semibold hover:bg-blue-700 transition-colors duration-300 flex items-center gap-2"
                                             >
                                                 Learn More About Us
-                                                <ArrowRight className="w-5 h-5" />
+                                                <ArrowRight className="w-4 h-4" />
                                             </button>
                                             <button
                                                 onClick={() => (window.location.href = '/donations')}
-                                                className="bg-blue-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 transition-colors duration-300 animate-pulse"
+                                                className="bg-blue-500 text-white px-5 py-2 text-sm lg:text-base rounded-full font-semibold hover:bg-blue-400 transition-colors duration-300 animate-pulse"
                                             >
                                                 DONATE NOW
                                             </button>
                                         </div>
+
                                     </div>
                                 </section>
+                                <StoriesSection />
+
+
 
                                 {/* Mission Overview */}
                                 <section className="py-16 px-4 bg-gray-50">
@@ -123,59 +128,30 @@ function App() {
                                 </section>
 
                                 {/* Call to Action */}
-                                <section className="py-16 px-4 bg-blue-600 text-white">
-                                    <div className="max-w-4xl mx-auto text-center">
-                                        <h2 className="text-3xl md:text-4xl font-bold mb-6">Join Our Mission</h2>
-                                        <p className="text-xl mb-8 opacity-90">
-                                            Together, we can create a more equitable Nigeria where every individual has access to
-                                            quality education, healthcare, and economic opportunities.
-                                        </p>
-                                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                            <button
-                                                onClick={handleViewPrograms}
-                                                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-300"
-                                            >
-                                                View Our Programs
-                                            </button>
-                                            <button
-                                                onClick={handleGetInvolved}
-                                                className="bg-blue-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 transition-colors duration-300 border-2 border-white"
-                                            >
-                                                Get Involved
-                                            </button>
-                                        </div>
-                                    </div>
-                                </section>
+                                {/*<section className="py-16 px-4 bg-blue-600 text-white">*/}
+                                {/*    <div className="max-w-4xl mx-auto text-center">*/}
+                                {/*        <h2 className="text-3xl md:text-4xl font-bold mb-6">Join Our Mission</h2>*/}
+                                {/*        <p className="text-xl mb-8 opacity-90">*/}
+                                {/*            Together, we can create a more equitable Nigeria where every individual has access to*/}
+                                {/*            quality education, healthcare, and economic opportunities.*/}
+                                {/*        </p>*/}
+                                {/*        <div className="flex flex-col sm:flex-row gap-4 justify-center">*/}
+                                {/*            <button*/}
+                                {/*                onClick={handleViewPrograms}*/}
+                                {/*                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-300"*/}
+                                {/*            >*/}
+                                {/*                View Our Programs*/}
+                                {/*            </button>*/}
+                                {/*            <button*/}
+                                {/*                onClick={handleGetInvolved}*/}
+                                {/*                className="bg-blue-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 transition-colors duration-300 border-2 border-white"*/}
+                                {/*            >*/}
+                                {/*                Get Involved*/}
+                                {/*            </button>*/}
+                                {/*        </div>*/}
+                                {/*    </div>*/}
+                                {/*</section>*/}
 
-                                {/* Stories Section */}
-                                <section className="py-16 px-4 bg-gray-50">
-                                    <div className="max-w-7xl mx-auto">
-                                        <div className="text-center mb-12">
-                                            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                                                Impact Stories
-                                            </h2>
-                                            <p className="text-lg text-gray-600">
-                                                Read about the lives we've touched and the communities we've helped transform.
-                                            </p>
-                                        </div>
-
-                                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                                            {/* Stories will be loaded dynamically from API */}
-                                            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                                                <div className="h-48 bg-gradient-to-br from-blue-400 to-blue-600"></div>
-                                                <div className="p-6">
-                                                    <h3 className="text-xl font-semibold mb-3 text-gray-800">Loading Stories...</h3>
-                                                    <p className="text-gray-600 mb-4">
-                                                        Our impact stories will be loaded here from the backend.
-                                                    </p>
-                                                    <p className="text-sm text-gray-500">
-                                                        Stories showcase our humanitarian work across Nigeria.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
                             </main>
                         }
                     />
@@ -185,6 +161,7 @@ function App() {
                     <Route path="/organogram" element={<Organogram />} />
                     <Route path="/governance" element={<Governance />} />
                     <Route path="/donations" element={<Donations />} />
+                    <Route path='/stories' element={<StoriesSection/>} />
                 </Routes>
 
                 <Footer />

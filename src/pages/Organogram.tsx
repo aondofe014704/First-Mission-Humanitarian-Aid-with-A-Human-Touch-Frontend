@@ -140,7 +140,7 @@ const Organogram = () => {
                     <p className="text-xl text-blue-200 max-w-3xl mx-auto">
                         Humanity First Mission for Children Women and the Disabled Populations (FIRST MISSION)
                     </p>
-                    <p className="text-lg italic text-blue-300 mt-2">"Humanitarian Aid with a Humane Touch"</p>
+                    <p className="text-lg italic text-blue-300 mt-2">"Humanitarian Aid with a Human Touch"</p>
                 </div>
             </header>
 

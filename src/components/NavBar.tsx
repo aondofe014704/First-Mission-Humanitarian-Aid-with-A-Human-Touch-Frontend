@@ -31,10 +31,11 @@ const NavBar = () => {
         { name: 'About Us', href: '/about' },
         { name: 'Organogram', href: '/organogram' },
         { name: 'Governance', href: '/governance' },
+        {name: 'Program', href: '/programs'}
     ];
 
     return (
-        <nav className="bg-blue-600 shadow-lg sticky top-0 z-50">
+        <nav className="bg-blue-900 shadow-lg sticky top-0 z-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     {/* Logo/Brand */}
@@ -45,7 +46,7 @@ const NavBar = () => {
                                 HFMCWDP
                             </div>
                             <div className="text-xs italic">
-                                "Humanitarian Aid with a Humane Touch"
+                                "Humanitarian Aid with a Human Touch"
                             </div>
                         </div>
                     </Link>
@@ -74,22 +75,22 @@ const NavBar = () => {
                         >
                             DONATE NOW
                         </button>
-                        <button
-                            onClick={handleAuthClick}
-                            className="text-white hover:text-blue-200 transition-colors duration-200 p-2 rounded-full hover:bg-blue-700 flex items-center space-x-2"
-                        >
-                            {isAuthenticated ? (
-                                <>
-                                    <LogOut className="h-6 w-6" />
-                                    <span className="hidden xl:block text-sm">{user?.name}</span>
-                                </>
-                            ) : (
-                                <>
-                                    <User className="h-6 w-6" />
-                                    {/*<span className="hidden xl:block text-sm">Sign In</span>*/}
-                                </>
-                            )}
-                        </button>
+                        {/*<button*/}
+                        {/*    onClick={handleAuthClick}*/}
+                        {/*    className="text-white hover:text-blue-200 transition-colors duration-200 p-2 rounded-full hover:bg-blue-700 flex items-center space-x-2"*/}
+                        {/*>*/}
+                        {/*    {isAuthenticated ? (*/}
+                        {/*        <>*/}
+                        {/*            <LogOut className="h-6 w-6" />*/}
+                        {/*            <span className="hidden xl:block text-sm">{user?.name}</span>*/}
+                        {/*        </>*/}
+                        {/*    ) : (*/}
+                        {/*        <>*/}
+                        {/*            <User className="h-6 w-6" />*/}
+                        {/*            /!*<span className="hidden xl:block text-sm">Sign In</span>*!/*/}
+                        {/*        </>*/}
+                        {/*    )}*/}
+                        {/*</button>*/}
                     </div>
 
                     {/* Mobile menu button */}

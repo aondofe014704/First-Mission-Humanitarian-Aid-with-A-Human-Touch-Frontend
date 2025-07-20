@@ -30,7 +30,7 @@ const Governance = () => {
                         Transparency, Accountability, and Ethical Leadership
                     </p>
                     <p className="text-lg italic text-blue-300 mt-2">
-                        "Humanitarian Aid with a Humane Touch"
+                        "Humanitarian Aid with a Human Touch"
                     </p>
                 </div>
             </header>

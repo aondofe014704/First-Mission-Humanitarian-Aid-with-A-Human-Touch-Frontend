@@ -87,7 +87,7 @@ const Programs = () => {
                         Comprehensive humanitarian and development programs addressing the needs of vulnerable populations
                     </p>
                     <p className="text-lg italic text-blue-300 mt-2">
-                        "Humanitarian Aid with a Humane Touch"
+                        "Humanitarian Aid with a Human Touch"
                     </p>
                 </div>
             </header>
@@ -139,12 +139,14 @@ const Programs = () => {
                         sustainable solutions for the future.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-semibold">
+                        <button
+                            onClick={() => (window.location.href = '/donations')}
+                            className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-semibold">
                             DONATE NOW
                         </button>
-                        <button className="bg-white text-blue-600 border-2 border-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors duration-200 font-semibold">
-                            Get Involved
-                        </button>
+                        {/*<button className="bg-white text-blue-600 border-2 border-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors duration-200 font-semibold">*/}
+                        {/*    Get Involved*/}
+                        {/*</button>*/}
                     </div>
                 </section>
             </main>

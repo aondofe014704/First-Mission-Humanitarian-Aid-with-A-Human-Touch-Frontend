@@ -32,19 +32,25 @@ const AboutUs = () => {
 
     return (
         <div className="min-h-screen bg-gray-50">
-            {/* Hero Section */}
-            <header className="bg-blue-800 text-white py-16">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <Heart className="h-16 w-16 mx-auto mb-6" />
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4">About Us</h1>
-                    <p className="text-xl text-blue-200 max-w-3xl mx-auto">
-                        Humanity First Mission for Children Women and the Disabled Populations
-                    </p>
-                    <p className="text-lg italic text-blue-300 mt-2">
-                        "Humanitarian Aid with a Humane Touch"
-                    </p>
+            <header className="flex justify-center pt-10 pb-6">
+                <div className="w-[200px] sm:w-[250px] md:w-[300px] lg:w-[350px]">
+                    <img
+                        src="https://res.cloudinary.com/dgvjxhqjd/image/upload/v1752847535/WhatsApp_Image_2025-07-18_at_14.42.00_f65ea67b-removebg-preview_k1iyo0.png"
+                        alt="First Mission Logo"
+                        className="w-full h-auto object-contain rounded-lg shadow"
+                        loading="lazy"
+                    />
+                    {/*<h2 className="text-center text-lg font-semibold mt-4 text-blue-900">*/}
+                    {/*    First Mission*/}
+                    {/*</h2>*/}
+
                 </div>
+
             </header>
+
+
+            {/*    </div>*/}
+            {/*</header>*/}
 
             <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 {/* Organization Profile */}
