@@ -1,26 +1,16 @@
 import { useState } from 'react';
-import { Menu, X,  Heart } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
-// import { useAuthStore } from '../auth/authStore';
 import AuthModal from '../auth/AuthModal';
 
 const NavBar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [showAuthModal, setShowAuthModal] = useState(false);
-    // const { isAuthenticated, user, logout } = useAuthStore();
     const navigate = useNavigate();
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
-
-    // const handleAuthClick = () => {
-    //     if (isAuthenticated) {
-    //         logout();
-    //     } else {
-    //         setShowAuthModal(true);
-    //     }
-    // };
 
     const handleDonateClick = () => {
         navigate('/donations');
@@ -40,10 +30,10 @@ const NavBar = () => {
                 <div className="flex justify-between items-center h-16">
                     {/* Logo/Brand */}
                     <Link to="/" className="flex items-center">
-                        <Heart className="h-8 w-8 text-white mr-2" />
+                        {/*<Heart className="h-8 w-8 text-white mr-2" />*/}
                         <div className="text-white">
                             <div className="text-base font-bold">
-                                HFMCWDP
+                                First Mission
                             </div>
                             <div className="text-xs italic">
                                 "Humanitarian Aid with a Human Touch"

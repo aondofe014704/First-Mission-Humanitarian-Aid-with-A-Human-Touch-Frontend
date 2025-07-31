@@ -22,14 +22,14 @@ const Governance = () => {
     return (
         <div className="min-h-screen bg-gray-50">
             {/* Hero Section */}
-            <header className="bg-blue-800 text-white py-16">
+            <header className="text-blue-800 py-16">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <Building2 className="h-16 w-16 mx-auto mb-6" />
                     <h1 className="text-4xl md:text-5xl font-bold mb-4">Governance</h1>
-                    <p className="text-xl text-blue-200 max-w-3xl mx-auto">
+                    <p className="text-xl text-blue-500 max-w-3xl mx-auto">
                         Transparency, Accountability, and Ethical Leadership
                     </p>
-                    <p className="text-lg italic text-blue-300 mt-2">
+                    <p className="text-lg italic text-blue-600 mt-2">
                         "Humanitarian Aid with a Human Touch"
                     </p>
                 </div>

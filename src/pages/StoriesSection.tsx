@@ -2,13 +2,14 @@ import { useEffect, useState } from 'react';
 import { Calendar, User, BookOpen, Loader2 } from 'lucide-react';
 import { useStoriesStore } from '../auth/storiesStore';
 
+const firstmission = '/firstmission.png'
 const StoriesSection = () => {
     const { stories, isLoading, fetchStories } = useStoriesStore();
     const [expandedStory, setExpandedStory] = useState<number | null>(null);
 
     useEffect(() => {
         fetchStories(); // background refresh on mount
-    }, []);
+    }, [fetchStories]);
 
     const formatDate = (dateString: string) =>
         new Date(dateString).toLocaleDateString('en-US', {
@@ -27,13 +28,6 @@ const StoriesSection = () => {
     return (
         <section className="py-16 px-4 bg-gray-50">
             <div className="max-w-7xl mx-auto">
-                {/*<div className="text-center mb-12">*/}
-                {/*    <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Impact Stories</h2>*/}
-                {/*    <p className="text-lg text-gray-600">*/}
-                {/*        Read about the lives we've touched and the communities we've helped transform.*/}
-                {/*    </p>*/}
-                {/*</div>*/}
-
                 {isLoading && stories.length === 0 ? (
                     <div className="flex justify-center items-center py-12">
                         <Loader2 className="h-12 w-12 text-blue-600 animate-spin mx-auto mb-4" />
@@ -63,9 +57,10 @@ const StoriesSection = () => {
                                         src={story.image_url || story.image}
                                         alt={story.title}
                                         className="w-full h-full object-cover"
+                                        loading="lazy"
                                         onError={(e) => {
-                                            (e.target as HTMLImageElement).src =
-                                                'https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&w=800';
+                                            const target = e.target as HTMLImageElement;
+                                            if (target.src !== firstmission) target.src = firstmission;
                                         }}
                                     />
                                 </div>
@@ -94,7 +89,7 @@ const StoriesSection = () => {
                                     <div className="flex items-center justify-between text-sm text-gray-500">
                                         <div className="flex items-center">
                                             <User className="h-4 w-4 mr-1" />
-                                            <span>{story.author_name}</span>
+                                            <span>{story.author_name} first-mission</span>
                                         </div>
                                         <div className="flex items-center">
                                             <Calendar className="h-4 w-4 mr-1" />
