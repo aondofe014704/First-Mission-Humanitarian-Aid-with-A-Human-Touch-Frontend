@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { ArrowRight, Users, Target, HandHeart } from 'lucide-react';
+import { Users, Target, HandHeart } from 'lucide-react';
 import StoriesSection from './StoriesSection';
 
 export default function Home() {
@@ -8,35 +8,36 @@ export default function Home() {
     return (
         <main>
             {/* Hero Section */}
-            <section className="bg-gray-50 py-12 px-4">
-                <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
-
+            <section className="bg-gray-50 py-8">
+                <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 px-4">
                     {/* Logo */}
                     <div className="flex-shrink-0 flex justify-center lg:justify-start w-full lg:w-auto">
                         <img
                             src="https://res.cloudinary.com/dgvjxhqjd/image/upload/v1752847535/WhatsApp_Image_2025-07-18_at_14.42.00_f65ea67b-removebg-preview_k1iyo0.png"
-                            alt="First Mission Logo"
-                            className="h-20 lg:h-24 w-auto"
+                            alt="First Mission Updated Logo"
+                            className="h-20 lg:h-24 w-auto transition-transform duration-300 hover:scale-105"
                         />
                     </div>
 
                     {/* Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full lg:w-auto">
+                    <div className="flex flex-col sm:flex-row gap-5 justify-center items-center w-full lg:w-auto">
                         <button
                             onClick={() => navigate('/about')}
-                            className="bg-blue-600 text-white px-5 py-2 text-sm lg:text-base rounded-full font-semibold hover:bg-blue-700 transition-colors duration-300 flex items-center gap-2"
+                            className="bg-blue-600 text-white px-6 py-3 text-sm lg:text-base rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 flex items-center gap-3 shadow-sm hover:shadow-md"
                         >
                             Learn More About Us
-                            <ArrowRight className="w-4 h-4" />
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
                         </button>
                         <button
                             onClick={() => navigate('/donations')}
-                            className="bg-blue-500 text-white px-5 py-2 text-sm lg:text-base rounded-full font-semibold hover:bg-blue-400 transition-colors duration-300 animate-pulse"
+                            className="bg-blue-500 text-white px-6 py-3 text-sm lg:text-base rounded-lg font-semibold hover:bg-blue-400 transition-all duration-300 shadow-sm hover:shadow-md relative overflow-hidden group"
                         >
-                            DONATE NOW
+                            <span className="relative z-10">DONATE NOW</span>
+                            <span className="absolute inset-0 bg-blue-300 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
                         </button>
                     </div>
-
                 </div>
             </section>
 
