@@ -30,7 +30,7 @@ const NavBar = () => {
                 <div className="flex justify-between items-center h-16">
                     {/* Logo/Brand */}
                     <Link to="/" className="flex items-center">
-                        {/*<Heart className="h-8 w-8 text-white mr-2" />*/}
+                        <img src="/logo.png" alt="First Mission Logo" className="h-8 w-8 mr-2" />
                         <div className="text-white">
                             <div className="text-base font-bold">
                                 First Mission
@@ -65,22 +65,6 @@ const NavBar = () => {
                         >
                             DONATE NOW
                         </button>
-                        {/*<button*/}
-                        {/*    onClick={handleAuthClick}*/}
-                        {/*    className="text-white hover:text-blue-200 transition-colors duration-200 p-2 rounded-full hover:bg-blue-700 flex items-center space-x-2"*/}
-                        {/*>*/}
-                        {/*    {isAuthenticated ? (*/}
-                        {/*        <>*/}
-                        {/*            <LogOut className="h-6 w-6" />*/}
-                        {/*            <span className="hidden xl:block text-sm">{user?.name}</span>*/}
-                        {/*        </>*/}
-                        {/*    ) : (*/}
-                        {/*        <>*/}
-                        {/*            <User className="h-6 w-6" />*/}
-                        {/*            /!*<span className="hidden xl:block text-sm">Sign In</span>*!/*/}
-                        {/*        </>*/}
-                        {/*    )}*/}
-                        {/*</button>*/}
                     </div>
 
                     {/* Mobile menu button */}
@@ -135,25 +119,6 @@ const NavBar = () => {
                         >
                             DONATE NOW
                         </button>
-                        {/*<button*/}
-                        {/*    onClick={() => {*/}
-                        {/*        handleAuthClick();*/}
-                        {/*        setIsMenuOpen(false);*/}
-                        {/*    }}*/}
-                        {/*    className="w-full flex items-center justify-center space-x-2 text-white hover:bg-blue-800 px-4 py-2 rounded-md transition-colors duration-200"*/}
-                        {/*>*/}
-                        {/*    {isAuthenticated ? (*/}
-                        {/*        <>*/}
-                        {/*            <LogOut className="h-5 w-5" />*/}
-                        {/*            <span>Sign Out ({user?.name})</span>*/}
-                        {/*        </>*/}
-                        {/*    ) : (*/}
-                        {/*        <>*/}
-                        {/*            <User className="h-5 w-5" />*/}
-                        {/*            <span>Sign In/Up</span>*/}
-                        {/*        </>*/}
-                        {/*    )}*/}
-                        {/*</button>*/}
                     </div>
                 </div>
             </div>

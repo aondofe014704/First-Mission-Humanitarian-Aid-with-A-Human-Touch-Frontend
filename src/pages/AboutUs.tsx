@@ -32,21 +32,21 @@ const AboutUs = () => {
 
     return (
         <div className="min-h-screen bg-gray-50">
-            <header className="flex justify-center pt-10 pb-6">
-                <div className="w-[200px] sm:w-[250px] md:w-[300px] lg:w-[350px]">
-                    <img
-                        src="https://res.cloudinary.com/dgvjxhqjd/image/upload/v1752847535/WhatsApp_Image_2025-07-18_at_14.42.00_f65ea67b-removebg-preview_k1iyo0.png"
-                        alt="First Mission Logo"
-                        className="w-full h-auto object-contain rounded-lg shadow"
-                        loading="lazy"
-                    />
-                    {/*<h2 className="text-center text-lg font-semibold mt-4 text-blue-900">*/}
-                    {/*    First Mission*/}
-                    {/*</h2>*/}
+            {/*<header className="flex justify-center pt-10 pb-6">*/}
+            {/*    <div className="w-[200px] sm:w-[250px] md:w-[300px] lg:w-[350px]">*/}
+            {/*        <img*/}
+            {/*            src="https://res.cloudinary.com/dgvjxhqjd/image/upload/v1752847535/WhatsApp_Image_2025-07-18_at_14.42.00_f65ea67b-removebg-preview_k1iyo0.png"*/}
+            {/*            alt="First Mission Logo"*/}
+            {/*            className="w-full h-auto object-contain rounded-lg shadow"*/}
+            {/*            loading="lazy"*/}
+            {/*        />*/}
+            {/*        /!*<h2 className="text-center text-lg font-semibold mt-4 text-blue-900">*!/*/}
+            {/*        /!*    First Mission*!/*/}
+            {/*        /!*</h2>*!/*/}
 
-                </div>
+            {/*    </div>*/}
 
-            </header>
+            {/*</header>*/}
 
 
             {/*    </div>*/}
