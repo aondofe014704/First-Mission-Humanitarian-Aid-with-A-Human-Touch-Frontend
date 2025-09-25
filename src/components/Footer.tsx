@@ -77,12 +77,18 @@ const Footer = () => {
                             </p>
                         </div>
                         <div className="text-center sm:text-right">
-                            <p className="text-sm text-blue-300 flex flex-row sm:flex-col items-center sm:items-start gap-1 sm:gap-0">
+                            <a
+                                href="https://afeez-bello-portfolio.netlify.app/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-sm text-blue-300 flex flex-row sm:flex-col items-center sm:items-start gap-1 sm:gap-0 hover:text-blue-500 transition-colors"
+                            >
                                 <span>Designed by</span>
                                 <span className="font-semibold">Visual Status Nig Ltd</span>
                                 <span className="font-semibold">Reg No. 6911797</span>
-                            </p>
+                            </a>
                         </div>
+
 
                     </div>
                 </div>
