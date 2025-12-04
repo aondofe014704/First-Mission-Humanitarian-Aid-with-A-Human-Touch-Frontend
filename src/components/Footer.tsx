@@ -1,11 +1,11 @@
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Youtube, Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
     const socialLinks = [
         { name: 'Facebook', icon: Facebook, href: 'https://www.facebook.com/profile.php?id=61584524796923' },
         { name: 'Twitter', icon: Twitter, href: '#' },
         { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/firstmissionnigeria' },
-        { name: 'LinkedIn', icon: Linkedin, href: '#' },
+        { name: 'Youtube', icon: Youtube, href: 'https://www.youtube.com/@FirstMission-c7r' },
     ];
 
     return (
