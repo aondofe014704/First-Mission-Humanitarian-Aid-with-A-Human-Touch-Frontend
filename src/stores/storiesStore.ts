@@ -1,19 +1,18 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import axios, { AxiosError } from 'axios';
+import { toast } from 'sonner';
+import { fetchStories } from '../api/stories';
 import { saveStories, getAllStories } from '../types/indexeddb';
-import type {Story} from '../types/story'; // unified import
-// unified import
-
-const BASE_URL = import.meta.env.VITE_BASE_URL;
+import type { Story } from '../types/story';
 
 interface StoriesState {
     stories: Story[];
     isLoading: boolean;
     error: string | null;
+
     fetchStories: () => Promise<void>;
     clearError: () => void;
-    setStories: (stories: Story[]) => void; // optional setter
+    setStories: (stories: Story[]) => void;
 }
 
 export const useStoriesStore = create<StoriesState>()(
@@ -22,43 +21,52 @@ export const useStoriesStore = create<StoriesState>()(
             stories: [],
             isLoading: false,
             error: null,
+
             setStories: (stories) => set({ stories }),
 
             fetchStories: async () => {
                 set({ isLoading: true, error: null });
 
                 try {
-                    const response = await axios.get<Story[]>(`${BASE_URL}/api/poststories/`);
-                    const newStories = response.data;
+                    // Try to fetch from API
+                    const newStories = await fetchStories();
                     const currentStories = get().stories;
 
+                    // Check if data has changed
                     const isDifferent =
                         newStories.length !== currentStories.length ||
-                        JSON.stringify(newStories.map((s) => s.id)) !==
-                        JSON.stringify(currentStories.map((s) => s.id));
+                        JSON.stringify(newStories.map((s) => s.id).sort()) !==
+                        JSON.stringify(currentStories.map((s) => s.id).sort());
 
-                    if (isDifferent) {
+                    if (isDifferent || currentStories.length === 0) {
                         set({ stories: newStories });
                         await saveStories(newStories);
                     }
 
                     set({ isLoading: false });
-                } catch (error: unknown) {
-                    const err = error as AxiosError<{ detail?: string }>;
-                    const fallbackMessage = err.response?.data?.detail || err.message || 'Failed silently';
+                } catch (error: any) {
+                    console.error('Failed to fetch stories:', error);
 
+                    // Try to load from cache
                     try {
                         const cached = await getAllStories();
                         if (cached.length) {
-                            set({ stories: cached });
+                            set({ stories: cached, isLoading: false });
+                            toast.info('Showing cached stories (offline mode)');
                         } else {
-                            set({ error: fallbackMessage });
+                            set({
+                                error: error.message || 'Failed to load stories',
+                                isLoading: false
+                            });
+                            toast.error('Failed to load stories');
                         }
-                    } catch {
-                        set({ error: fallbackMessage });
+                    } catch (cacheError) {
+                        set({
+                            error: error.message || 'Failed to load stories',
+                            isLoading: false
+                        });
+                        toast.error('Failed to load stories');
                     }
-
-                    set({ isLoading: false });
                 }
             },
 

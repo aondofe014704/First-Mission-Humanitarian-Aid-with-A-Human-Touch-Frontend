@@ -1,14 +1,12 @@
 import { useEffect, useState, useCallback } from 'react';
 import { toast } from 'sonner';
 import { Loader2 } from 'lucide-react';
-import { useDonationsStore, type DonationPost } from '../auth/donationStore';
-import {
-    saveDonationPosts,
-    getAllDonationPosts,
-} from '../types/donationdb';
+import { useDonationsStore } from '../stores/donationStore';
+import { getAllDonationPosts } from '../types/donationdb';
 import { DonationCard } from '../components/DonationCard';
 import { DonationDetail } from '../components/DonationDetail';
-import { usePaystack } from '../types/usePaystack';
+import { usePaystack } from '../hooks/usePaystack';
+import type { DonationPost } from '../types/donation';
 
 const firstmission = '/firstmission.png';
 
@@ -26,6 +24,7 @@ const Donations = () => {
     const [selectedPost, setSelectedPost] = useState<DonationPost | null>(null);
     const [donationAmount, setDonationAmount] = useState('');
     const [donationEmail, setDonationEmail] = useState('');
+    const [donationName, setDonationName] = useState('');
     const [isDonating, setIsDonating] = useState(false);
     const [hydratedFromCache, setHydratedFromCache] = useState(false);
 
@@ -35,17 +34,14 @@ const Donations = () => {
         try {
             await fetchPosts();
             await refreshPosts();
-            if (Array.isArray(posts) && posts.length > 0) {
-                await saveDonationPosts(posts);
-            }
         } catch {
-            // ignore, fallback logic runs separately
+            // Fallback logic runs separately
         }
-    }, [fetchPosts, refreshPosts, posts]);
+    }, [fetchPosts, refreshPosts]);
 
     useEffect(() => {
         void loadAndRefresh();
-    }, []);
+    }, [loadAndRefresh]);
 
     useEffect(() => {
         if ((!Array.isArray(posts) || posts.length === 0) && !hydratedFromCache) {
@@ -57,7 +53,7 @@ const Donations = () => {
                         setHydratedFromCache(true);
                     }
                 } catch {
-                    // swallow
+                    // Swallow error
                 }
             })();
         }
@@ -68,7 +64,7 @@ const Donations = () => {
             toast.success('✨ New campaigns loaded');
             clearUpdates();
         }
-    }, []);
+    }, [hasNewUpdates, clearUpdates]);
 
     const handleDonate = async () => {
         if (!selectedPost) {
@@ -76,13 +72,20 @@ const Donations = () => {
             return;
         }
 
-        if (!donationAmount || isNaN(Number(donationAmount)) || Number(donationAmount) < 100) {
+        const amount = Number(donationAmount);
+
+        if (!donationAmount || isNaN(amount) || amount < 100) {
             toast.error('Please enter a valid donation amount (minimum ₦100).');
             return;
         }
 
         if (!donationEmail || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(donationEmail)) {
             toast.error('Please enter a valid email address.');
+            return;
+        }
+
+        if (!donationName || donationName.trim().length < 2) {
+            toast.error('Please enter your name.');
             return;
         }
 
@@ -96,42 +99,48 @@ const Donations = () => {
 
         const capturedPost = selectedPost;
         const capturedEmail = donationEmail;
-        const capturedAmount = donationAmount;
+        const capturedAmount = amount;
+        const capturedName = donationName;
 
         try {
-            const accessToken = localStorage.getItem('accessToken') || undefined;
+            // Initialize donation
             const initData = await initiate(
                 capturedPost.id,
                 capturedAmount,
                 capturedEmail,
-                accessToken
+                capturedName
             );
 
-            const { public_key, email, amount, reference, donation_post_title } = initData;
-            if (!public_key || !email || !amount || !reference) {
+            const { reference, amount: paystackAmount } = initData;
+
+            if (!reference || !paystackAmount) {
                 throw new Error('Invalid response from server: missing required fields');
             }
 
+            // Open Paystack modal
             openPaystack({
-                public_key,
-                email,
-                amount,
                 reference,
+                email: capturedEmail,
+                amount: paystackAmount,
                 metadata: {
                     donation_post_id: capturedPost.id,
-                    donation_post_title,
+                    donation_post_title: capturedPost.title,
+                    donor_name: capturedName,
                 },
                 onSuccess: async (ref) => {
                     toast.success('Payment completed with Paystack. Verifying...');
                     try {
-                        await verify(ref, capturedPost.id, capturedAmount, capturedEmail, accessToken);
+                        await verify(ref, capturedPost.id, capturedAmount);
                         toast.success('🎉 Thank you for your donation!');
                         setSelectedPost(null);
                         setDonationAmount('');
                         setDonationEmail('');
+                        setDonationName('');
+                        setIsDonating(false);
                     } catch (verifyErr) {
                         console.error('Verification error:', verifyErr);
                         toast.error('Verification failed. Please contact support.');
+                        setIsDonating(false);
                     }
                 },
                 onCancel: () => {
@@ -139,11 +148,10 @@ const Donations = () => {
                     setIsDonating(false);
                 },
             });
-        } catch (error: unknown) {
-            const axiosError = error as any;
-            console.error('Error initiating donation:', axiosError?.message, axiosError?.response);
+        } catch (error: any) {
+            console.error('Error initiating donation:', error);
             toast.error(
-                axiosError?.response?.data?.error || 'Unable to initiate donation. Try again.'
+                error?.response?.data?.error || 'Unable to initiate donation. Try again.'
             );
             setIsDonating(false);
         }
@@ -186,9 +194,11 @@ const Donations = () => {
                 <DonationDetail
                     post={selectedPost}
                     donationEmail={donationEmail}
+                    donationName={donationName}
                     donationAmount={donationAmount}
                     isDonating={isDonating}
                     onChangeEmail={setDonationEmail}
+                    onChangeName={setDonationName}
                     onChangeAmount={setDonationAmount}
                     onDonate={handleDonate}
                     onBack={() => setSelectedPost(null)}

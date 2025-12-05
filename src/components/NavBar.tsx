@@ -1,19 +1,12 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import { Link, useNavigate } from 'react-router-dom';
-import AuthModal from '../auth/AuthModal';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [showAuthModal, setShowAuthModal] = useState(false);
-    const navigate = useNavigate();
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
-    };
-
-    const handleDonateClick = () => {
-        navigate('/donations');
     };
 
     const navItems = [
@@ -21,7 +14,7 @@ const NavBar = () => {
         { name: 'About Us', href: '/about' },
         { name: 'Organogram', href: '/organogram' },
         { name: 'Governance', href: '/governance' },
-        {name: 'Program', href: '/programs'}
+        { name: 'Program', href: '/programs' }
     ];
 
     return (
@@ -58,6 +51,7 @@ const NavBar = () => {
                     </div>
 
                     {/* Desktop Actions */}
+                    {/*
                     <div className="hidden lg:flex items-center space-x-4">
                         <button
                             onClick={handleDonateClick}
@@ -66,6 +60,7 @@ const NavBar = () => {
                             DONATE NOW
                         </button>
                     </div>
+                    */}
 
                     {/* Mobile menu button */}
                     <div className="lg:hidden">
@@ -109,6 +104,7 @@ const NavBar = () => {
                     </ul>
 
                     {/* Mobile Actions */}
+                    {/*
                     <div className="pt-4 border-t border-blue-600 space-y-3">
                         <button
                             onClick={() => {
@@ -120,13 +116,9 @@ const NavBar = () => {
                             DONATE NOW
                         </button>
                     </div>
+                    */}
                 </div>
             </div>
-
-            <AuthModal
-                isOpen={showAuthModal}
-                onClose={() => setShowAuthModal(false)}
-            />
         </nav>
     );
 };
