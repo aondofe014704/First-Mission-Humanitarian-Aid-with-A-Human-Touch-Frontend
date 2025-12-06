@@ -1,12 +1,13 @@
-import { useEffect, useState } from 'react';
-import { Calendar, User, BookOpen, Loader2 } from 'lucide-react';
+import { useEffect } from 'react';
+import { Calendar, User, BookOpen, Loader2, ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { useStoriesStore } from '../stores/storiesStore';
 
 const fallbackImage = '/firstmission.png';
 
 const StoriesSection = () => {
-    const { stories, isLoading, error, fetchStories, clearError } = useStoriesStore();
-    const [expandedStory, setExpandedStory] = useState<number | null>(null);
+    const { stories, isLoading, error, fetchStories } = useStoriesStore();
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetchStories();
@@ -15,7 +16,6 @@ const StoriesSection = () => {
     useEffect(() => {
         if (error) {
             console.error('Stories error:', error);
-            // optional: show toast/banner here
         }
     }, [error]);
 
@@ -43,15 +43,15 @@ const StoriesSection = () => {
         return text.slice(0, max) + '...';
     };
 
-    const handleReadMore = (id: number) => {
-        setExpandedStory(expandedStory === id ? null : id);
-    };
-
     const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
         const target = e.target as HTMLImageElement;
         if (target.src !== fallbackImage) {
             target.src = fallbackImage;
         }
+    };
+
+    const handleReadMore = (storyId: number) => {
+        navigate(`/stories/${storyId}`);
     };
 
     if (isLoading && stories.length === 0) {
@@ -97,7 +97,6 @@ const StoriesSection = () => {
                 >
                     {stories.map((story) => {
                         const plainText = stripHtml(story.description);
-                        const needsReadMore = plainText.length > 150;
                         const imageUrl = story.image_url || story.image || fallbackImage;
 
                         return (
@@ -120,26 +119,17 @@ const StoriesSection = () => {
                                         {story.title}
                                     </h3>
 
-                                    {expandedStory === story.id ? (
-                                        <div
-                                            className="prose prose-sm max-w-none text-gray-700 mb-6 leading-relaxed"
-                                            dangerouslySetInnerHTML={{ __html: story.description }}
-                                        />
-                                    ) : (
-                                        <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
-                                            {truncateText(plainText, 180)}
-                                        </p>
-                                    )}
+                                    <p className="text-gray-600 mb-6 leading-relaxed flex-grow line-clamp-4">
+                                        {truncateText(plainText, 180)}
+                                    </p>
 
-                                    {needsReadMore && (
-                                        <button
-                                            onClick={() => handleReadMore(story.id)}
-                                            className="text-blue-600 hover:text-blue-700 font-semibold flex items-center mb-6"
-                                        >
-                                            {expandedStory === story.id ? 'Show Less' : 'Read More'}
-                                            <BookOpen className="h-4 w-4 ml-2" />
-                                        </button>
-                                    )}
+                                    <button
+                                        onClick={() => handleReadMore(story.id)}
+                                        className="self-start bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center font-semibold mb-6"
+                                    >
+                                        Read Full Story
+                                        <ArrowRight className="h-4 w-4 ml-2" />
+                                    </button>
 
                                     <div className="flex items-center justify-between text-sm text-gray-500 mt-auto pt-4 border-t border-gray-200">
                                         <div className="flex items-center">

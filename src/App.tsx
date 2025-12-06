@@ -8,6 +8,7 @@ import Organogram from './pages/Organogram';
 import Governance from './pages/Governance';
 // import Donations from './pages/Donations';
 import StoriesSection from './pages/StoriesSection';
+import StoryDetail from './pages/StoryDetail';
 import Home from './pages/Home';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
                 <Route path="/governance" element={<Governance />} />
                 {/*<Route path="/donations" element={<Donations />} />*/}
                 <Route path="/stories" element={<StoriesSection />} />
+                <Route path="/stories/:id" element={<StoryDetail />} />
             </Routes>
             <Footer />
         </Router>

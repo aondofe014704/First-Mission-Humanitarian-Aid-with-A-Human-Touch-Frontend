@@ -1,12 +1,4 @@
-export interface DonationPost {
-    id: number;
-    title: string;
-    description: string;
-    image?: string;
-    image_url: string;
-    author_name?: string;
-    created_at: string;
-}
+export type { DonationPost } from './donation';
 
 const DB_NAME = 'donations-db';
 const STORE_NAME = 'donation-posts';
@@ -26,7 +18,7 @@ function openDB(): Promise<IDBDatabase> {
     });
 }
 
-export async function saveDonationPosts(posts: DonationPost[]): Promise<void> {
+export async function saveDonationPosts(posts: import('./donation').DonationPost[]): Promise<void> {
     const db = await openDB();
     return new Promise((resolve, reject) => {
         const tx = db.transaction(STORE_NAME, 'readwrite');
@@ -37,13 +29,13 @@ export async function saveDonationPosts(posts: DonationPost[]): Promise<void> {
     });
 }
 
-export async function getAllDonationPosts(): Promise<DonationPost[]> {
+export async function getAllDonationPosts(): Promise<import('./donation').DonationPost[]> {
     const db = await openDB();
     return new Promise((resolve, reject) => {
         const tx = db.transaction(STORE_NAME, 'readonly');
         const store = tx.objectStore(STORE_NAME);
         const req = store.getAll();
-        req.onsuccess = () => resolve(req.result as DonationPost[]);
+        req.onsuccess = () => resolve(req.result as import('./donation').DonationPost[]);
         req.onerror = () => reject(req.error);
     });
 }
