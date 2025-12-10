@@ -6,6 +6,8 @@ import AboutUs from './pages/AboutUs';
 import Programs from './pages/Programs';
 import Organogram from './pages/Organogram';
 import Governance from './pages/Governance';
+import Gallery from './pages/Gallery';
+import Contact from './pages/Contact';
 // import Donations from './pages/Donations';
 import StoriesSection from './pages/StoriesSection';
 import StoryDetail from './pages/StoryDetail';
@@ -27,6 +29,8 @@ function App() {
                 <Route path="/programs" element={<Programs />} />
                 <Route path="/organogram" element={<Organogram />} />
                 <Route path="/governance" element={<Governance />} />
+                <Route path="/gallery" element={<Gallery />} />
+                <Route path="/contact" element={<Contact />} />
                 {/*<Route path="/donations" element={<Donations />} />*/}
                 <Route path="/stories" element={<StoriesSection />} />
                 <Route path="/stories/:id" element={<StoryDetail />} />

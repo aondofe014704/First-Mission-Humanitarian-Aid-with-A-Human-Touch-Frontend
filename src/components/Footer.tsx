@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Youtube, Mail, Phone, MapPin, X } from 'lucide-react';
+import { Facebook, Instagram, Youtube, Mail, Phone, MapPin, X, Linkedin } from 'lucide-react';
 
 const Footer = () => {
     const socialLinks = [
@@ -6,6 +6,7 @@ const Footer = () => {
         { name: 'X', icon: X, href: 'https://x.com/settings/profile' },
         { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/firstmissionnigeria' },
         { name: 'Youtube', icon: Youtube, href: 'https://www.youtube.com/@FirstMission-c7r' },
+        { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com' },
     ];
 
     return (
@@ -46,7 +47,7 @@ const Footer = () => {
                             <li><a href="/about" className="text-blue-200 hover:text-white transition-colors duration-200">About Us</a></li>
                             <li><a href="/organogram" className="text-blue-200 hover:text-white transition-colors duration-200">Organogram</a></li>
                             <li><a href="/programs" className="text-blue-200 hover:text-white transition-colors duration-200">Programs</a></li>
-                            <li><a href="#contact" className="text-blue-200 hover:text-white transition-colors duration-200">Contact</a></li>
+                            <li><a href="/contact" className="text-blue-200 hover:text-white transition-colors duration-200">Contact Us</a></li>
                         </ul>
                     </div>
 
