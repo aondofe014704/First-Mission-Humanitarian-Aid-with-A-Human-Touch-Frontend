@@ -6,7 +6,7 @@ const Footer = () => {
         { name: 'X', icon: X, href: 'https://x.com/settings/profile' },
         { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/firstmissionnigeria' },
         { name: 'Youtube', icon: Youtube, href: 'https://www.youtube.com/@FirstMission-c7r' },
-        { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com' },
+        { name: 'LinkedIn', icon: Linkedin, href: '' },
     ];
 
     return (
@@ -16,10 +16,10 @@ const Footer = () => {
                     {/* Organization Info */}
                     <div className="lg:col-span-2">
                         <h3 className="text-xl font-bold mb-4">
-                            Humanity First Mission for Children Women and the Disabled Populations
+                           HUMANITY FIRST MISSION FOR CHILDREN WOMEN AND PEOPLE WITH DISABILITIES (FIRST MISSION)
                         </h3>
                         <p className="text-blue-200 mb-4 max-w-md">
-                            "Humanitarian Aid with a Human Touch" - Dedicated to providing humanitarian aid and support to vulnerable populations, particularly children, women, and people with disabilities, in Nigeria.
+                          FIRST MISSION is Dedicated to providing humanitarian aid and support to vulnerable populations, particularly children, women, and people with disabilities, in Nigeria.
                         </p>
                         <div className="space-y-2">
                             <div className="flex items-center space-x-2">
@@ -33,7 +33,8 @@ const Footer = () => {
                             <div className="flex items-center space-x-2">
                                 <MapPin className="h-4 w-4 text-blue-300" />
                                 <span className="text-sm text-blue-200">
-                  Block F1 Fashar Shopping Complex, Behind Hassan Gas Maduganari By-pass
+                  N0. 6 Off ‭Damboa Road, Opp. Mafoni liberty Pri. 
+                  sch., Beside Armani Event centre, Maiduguri, Borno state
                 </span>
                             </div>
                         </div>
@@ -59,7 +60,8 @@ const Footer = () => {
                                 <a
                                     key={social.name}
                                     href={social.href}
-                                    className="text-blue-200 hover:text-white transition-colors duration-200 p-2 rounded-full hover:bg-blue-800"
+                                    className="text-blue-200 hover:text-white transition-colors duration-200
+                                     p-2 rounded-full hover:bg-blue-800"
                                     aria-label={`Follow us on ${social.name}`}
                                 >
                                     <social.icon className="h-5 w-5" />
@@ -74,7 +76,7 @@ const Footer = () => {
                     <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
                         <div className="text-center sm:text-left">
                             <p className="text-sm text-blue-200">
-                                &copy; 2025 Humanity First Mission for Children Women and the Disabled Populations (FIRST MISSION). All rights reserved.
+                                &copy; 2025 Humanity First Mission for Children Women and People with Disabilities (FIRST MISSION). All rights reserved.
                             </p>
                         </div>
                         <div className="text-center sm:text-right">
@@ -82,11 +84,13 @@ const Footer = () => {
                                 href="https://afeez-bello-portfolio.netlify.app/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-sm text-blue-300 flex flex-row sm:flex-col items-center sm:items-start gap-1 sm:gap-0 hover:text-blue-500 transition-colors"
+                                className="text-sm text-blue-300 flex flex-row sm:flex-col 
+                                items-center sm:items-start gap-1 sm:gap-0 hover:text-blue-500 transition-colors"
                             >
                                 <span>Designed by</span>
                                 <span className="font-semibold">Visual Status Nig Ltd</span>
                                 <span className="font-semibold">Reg No. 6911797</span>
+                                <span className="font-semibold">08065099019</span>
                             </a>
                         </div>
 

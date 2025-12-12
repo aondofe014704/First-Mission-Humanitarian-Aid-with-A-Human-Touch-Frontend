@@ -12,12 +12,20 @@ const AboutUs = () => {
 
     const objectives = [
         'To provide humanitarian assistance and support to vulnerable populations, particularly children, women, and people with disabilities, in Nigeria.',
-        'To promote and protect the rights of children and women, ensuring their access to education, healthcare, and economic empowerment.',
-        'To contribute to the reduction of poverty, inequality, and social injustice in Nigeria, with a focus on marginalized communities.',
-        'To mainstream climate change and environmental considerations into all programs and activities.',
+        'To ensure equal access to quality and inclusive education for all children, including those with disabilities.',
+        'To empower youth and new graduates with essential skills for careers in international development.',
+        'To provide access to healthcare for pregnant and breastfeeding women to ensure they have access to healthcare for the various needs like anti-natal, Delivery, ANC, etc. Through our health specific programs.',
         'To promote gender equality, equity, and inclusivity in all aspects of the organization\'s work.',
-        'To contribute to fighting the climate change issues in Nigeria, and bringing sustainable Nigeria after the occurrence climate change impact.',
-        'To contribute to combating internal crises among community in Nigeria through peaceful dialogues and effective programming that will bring peace.'
+        'To treat under-5 children for malnutrition (MAM, SAM, and SAM with complications), and ensure MIYCF and healthcare strengthening/advocacy through our holistic nutrition programming.',
+        'To combat HIV/AIDS/malaria, tuberculosis, and neglected tropical diseases through prevention, treatment, awareness, and improved health systems.',
+        'To ensure communities have access to clean and adequate water and WASH facilities provision/rehabilitation/upgrade, as well as prevention of WASH Related diseases.',
+        'To Protect children and vulnerable people through comprehensive protection programs.',
+        'To promote and protect the rights of people with disabilities and women, ensuring access to education, healthcare, and economic empowerment.',
+        'To provide temporal and long-term food security through food assistance and agricultural support.',
+        'To conduct evidence-based research for international development in emergency and developmental contexts.',
+        'To promote gender equality, women rights, and economic empowerment for women and girls.',
+        'To promote dialogue, reconciliation, and social cohesion to prevent and manage conflicts, and address community-based rehabilitation, reintegration and transitional Justice to address past human rights abuses.',
+        'To mainstream climate change and environmental considerations into all programs and activities.'
     ];
 
     const generalObjectives = [
@@ -55,14 +63,26 @@ const AboutUs = () => {
             <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 {/* Organization Profile */}
                 <section className="mb-16">
-                    <h2 className="text-3xl font-bold text-blue-800 mb-6 text-center">Organization Profile</h2>
+                    <h2 className="text-3xl font-bold text-blue-800 mb-6 text-center">ORGANIZATION PROFILE</h2>
                     <div className="bg-white rounded-lg shadow-lg p-8">
                         <p className="text-lg text-gray-700 leading-relaxed">
-                            FIRST MISSION INITIATIVE FOR CHILDREN, WOMEN AND THE DISABLED POPULATION (HUMANITARIAN MISSION) is a child-focused and women's rights organization registered in Nigeria in 2025, a humanitarian and developmental organization mandated to respond to humanitarian crises, poverty encroachment, insurgencies, climate change, and environmental issues across the country, with a specific focus on the insurgent and poverty bedeviled communities in Nigeria.
+                            HUMANITY FIRST MISSION FOR CHILDREN WOMEN AND PEOPLE WITH DISABILITIES
+                             (FIRST MISSION) is a child-focused and women's rights organization registered
+                              in Nigeria in 2025, a humanitarian and developmental organization mandated 
+                              to respond to humanitarian crises, poverty encroachment, insurgencies, 
+                              climate change, and environmental issues across the country, with a specific 
+                              focus on the insurgent and poverty bedeviled communities in Nigeria. 
+                              Dedicated to ensuring child health, education, women's empowerment, 
+                              and gender equality, ending violence against women and girls, 
+                              FIRST MISSION delivers comprehensive programs in protection, health, 
+                              nutrition, women's empowerment, WASH/NFIs/MPCA, education, 
+                              career development, research for international development, 
+                              food security, livelihood/early recovery, climate change/sustainability, 
+                              and conflict resolution/Peace restoration and reconstruction  
+                              with a strong emphasis on inclusion for people with disabilities 
+                              and mainstreaming climate change considerations in all programming.
                         </p>
-                        <p className="text-lg text-gray-700 leading-relaxed mt-4">
-                            Dedicated to ensuring child health, education, women's empowerment, and gender equality, ending violence against women and adolescent girls, FIRST MISSION delivers comprehensive programs in protection, health, nutrition, women's empowerment, WASH/NFIs/MPCA, education, career development, research for international development, food security, livelihood/early recovery, climate change/sustainability, and conflict resolution/Peace restoration and reconstruction with a strong emphasis on inclusivity for people with disabilities and mainstreaming climate change considerations in all programming.
-                        </p>
+                       
                     </div>
                 </section>
 
@@ -72,42 +92,43 @@ const AboutUs = () => {
                         <div className="bg-white rounded-lg shadow-lg p-8">
                             <div className="flex items-center mb-6">
                                 <Target className="h-8 w-8 text-blue-600 mr-3" />
-                                <h2 className="text-3xl font-bold text-blue-800">Mission Statement</h2>
+                                <h2 className="text-3xl font-bold text-blue-800">MISSION STATEMENT</h2>
                             </div>
                             <p className="text-gray-700 leading-relaxed mb-6">
-                                FIRST MISSION is committed to delivering inclusive and sustainable humanitarian assistance, promoting child health, education, women's empowerment, and gender equality, while addressing the unique needs of people with disabilities and mitigating the impacts of climate change, to vulnerable populations, particularly in Nigerian communities, affected by insurgency, conflict, and environmental degradation.
+                                FIRST MISSION is committed to provide compassionate and 
+                                timely humanitarian aid to those affected by crisis, 
+                                promoting dignity, hope, resilience, and gender 
+                                equality, working towards ending violence against 
+                                women and adolescent girls.
                             </p>
-                            <div className="bg-blue-50 p-4 rounded-lg">
-                                <h3 className="font-semibold text-blue-800 mb-2">Precise Mission</h3>
-                                <p className="text-gray-700">
-                                    FIRST MISSION is committed to provide compassionate and timely humanitarian aid to those affected by crisis, promoting dignity, hope, and resilience.
-                                </p>
-                            </div>
+                            
                         </div>
 
                         <div className="bg-white rounded-lg shadow-lg p-8">
                             <div className="flex items-center mb-6">
                                 <Eye className="h-8 w-8 text-blue-600 mr-3" />
-                                <h2 className="text-3xl font-bold text-blue-800">Vision Statement</h2>
+                                <h2 className="text-3xl font-bold text-blue-800">VISION STATEMENT</h2>
                             </div>
                             <p className="text-gray-700 leading-relaxed mb-6">
-                                FIRST MISSION envisions a resilient and equitable Nigeria where all individuals, particularly children, women, and people with disabilities, have access to quality education, healthcare, and economic opportunities, and are empowered to thrive in a climate-resilient and sustainable environment, free from poverty, inequality, and social injustice.
+                                FIRST MISSION envisioned a Nigeria where every individual 
+                                has access to basic necessities, safety, and opportunities 
+                                to thrive, free from the impact of crisis and poverty, 
+                                having dignity and hope all individuals especially women and Girls.
                             </p>
-                            <div className="bg-blue-50 p-4 rounded-lg">
-                                <h3 className="font-semibold text-blue-800 mb-2">Precise Vision</h3>
-                                <p className="text-gray-700">
-                                    FIRST MISSION envisioned a Nigeria where every individual has access to basic necessities, safety, and opportunities to thrive, free from the impact of crisis and poverty.
-                                </p>
-                            </div>
+                           
                         </div>
                     </div>
                 </section>
 
                 {/* Core Values */}
                 <section className="mb-16">
-                    <h2 className="text-3xl font-bold text-blue-800 mb-8 text-center">Core Values</h2>
+                    <h2 className="text-3xl font-bold text-blue-800 mb-8 text-center">CORE VALUES</h2>
                     <p className="text-center text-gray-600 mb-8 max-w-4xl mx-auto">
-                        FIRST MISSION is guided by the core values of Compassion, Integrity, Inclusivity, Accountability, Transparency, and Sustainability, upholding the dignity and rights of vulnerable populations, particularly children, women, and people with disabilities, in all aspects of our humanitarian and development work in Nigeria and beyond.
+                        FIRST MISSION is guided by the core values of Compassion, 
+                        Integrity, Inclusivity, Accountability, Transparency, and 
+                        Sustainability, upholding the dignity and rights of vulnerable 
+                        populations, particularly children, women, and people with disabilities, 
+                        in all aspects of our humanitarian and development work in Nigeria and beyond.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {coreValues.map((value, index) => (
@@ -124,10 +145,10 @@ const AboutUs = () => {
 
                 {/* Aims and Objectives */}
                 <section className="mb-16">
-                    <h2 className="text-3xl font-bold text-blue-800 mb-8 text-center">Aims and Objectives</h2>
+                    <h2 className="text-3xl font-bold text-blue-800 mb-8 text-center">AIMS AND OBJECTIVES</h2>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         <div className="bg-white rounded-lg shadow-lg p-8">
-                            <h3 className="text-2xl font-semibold text-blue-700 mb-6">Main Objectives</h3>
+                            <h3 className="text-2xl font-semibold text-blue-700 mb-6">MAIN OBJECTIVES</h3>
                             <ul className="space-y-4">
                                 {objectives.map((objective, index) => (
                                     <li key={index} className="flex items-start">
@@ -139,7 +160,7 @@ const AboutUs = () => {
                         </div>
 
                         <div className="bg-white rounded-lg shadow-lg p-8">
-                            <h3 className="text-2xl font-semibold text-blue-700 mb-6">General Objectives</h3>
+                            <h3 className="text-2xl font-semibold text-blue-700 mb-6">GENERAL OBJECTIVES</h3>
                             <ul className="space-y-4">
                                 {generalObjectives.map((objective, index) => (
                                     <li key={index} className="flex items-start">
@@ -155,19 +176,22 @@ const AboutUs = () => {
                 {/* Cross-Cutting Objectives */}
                 <section className="mb-16">
                     <div className="bg-blue-50 rounded-lg p-8">
-                        <h3 className="text-2xl font-semibold text-blue-800 mb-6 text-center">Cross-Cutting Objectives</h3>
+                        <h3 className="text-2xl font-semibold text-blue-800 mb-6 text-center">CROSS-CUTTING OBJECTIVES</h3>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div className="text-center">
                                 <Globe className="h-12 w-12 text-blue-600 mx-auto mb-3" />
-                                <p className="text-gray-700">Mainstream climate change and environmental considerations into all programs and activities.</p>
+                                <p className="text-gray-700">To mainstream climate change and environmental considerations 
+                                    into all programs and activities.</p>
                             </div>
                             <div className="text-center">
                                 <Users className="h-12 w-12 text-blue-600 mx-auto mb-3" />
-                                <p className="text-gray-700">Promote gender equality, equity, and inclusivity in all aspects of the organization's work.</p>
+                                <p className="text-gray-700">To promote gender equality, equity, and inclusion in all 
+                                    aspects of the organization's work.</p>
                             </div>
                             <div className="text-center">
                                 <Heart className="h-12 w-12 text-blue-600 mx-auto mb-3" />
-                                <p className="text-gray-700">Ensure the inclusion and participation of people with disabilities in all programs and activities.</p>
+                                <p className="text-gray-700">To ensure the inclusion and participation of people with 
+                                    disabilities in all programs and activities.</p>
                             </div>
                         </div>
                     </div>

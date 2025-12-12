@@ -25,7 +25,7 @@ const Governance = () => {
             <header className="text-blue-800 py-16">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <Building2 className="h-16 w-16 mx-auto mb-6" />
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4">Governance</h1>
+                    <h1 className="text-4xl md:text-5xl font-bold mb-4">GOVERNANCE</h1>
                     <p className="text-xl text-blue-500 max-w-3xl mx-auto">
                         Transparency, Accountability, and Ethical Leadership
                     </p>
@@ -38,33 +38,50 @@ const Governance = () => {
             <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 {/* Organization Information */}
                 <section className="mb-16">
-                    <h2 className="text-3xl font-bold text-blue-800 mb-8 text-center">Organization Information</h2>
+                    <h2 className="text-3xl font-bold text-blue-800 mb-8 text-center">ORGANIZATION INFORMATION</h2>
                     <div className="bg-white rounded-lg shadow-lg p-8">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div>
-                                <h3 className="text-xl font-semibold text-blue-700 mb-4">Official Name</h3>
+                                <h3 className="text-xl font-semibold text-blue-700 mb-4">OFFICIAL NAME</h3>
                                 <p className="text-gray-700 mb-4">
-                                    Humanity First Mission for Children Women and the Disabled Populations (FIRST MISSION)
+                                    Humanity First Mission for Children Women and People with Disabilities (FIRST MISSION)
                                 </p>
 
-                                <h3 className="text-xl font-semibold text-blue-700 mb-4">Slogan</h3>
-                                <p className="text-gray-700 italic mb-4">"Humanitarian Aid with a Humane Touch"</p>
+                                <h3 className="text-xl font-semibold text-blue-700 mb-4">SLOGAN</h3>
+                                <p className="text-gray-700 italic mb-4">"Humanitarian Aid with a Human Touch"</p>
 
-                                <h3 className="text-xl font-semibold text-blue-700 mb-4">Organization Color</h3>
+                                <h3 className="text-xl font-semibold text-blue-700 mb-4">ORGANIZATION COLOR</h3>
                                 <div className="flex items-center">
                                     <div className="w-8 h-8 bg-blue-600 rounded mr-3"></div>
                                     <span className="text-gray-700">Blue</span>
                                 </div>
+
+                                <h3 className="text-xl font-semibold text-blue-700 mb-4">FONT</h3>
+                                <div className="flex items-center">
+                                    <div className="w-8 h-8 bg-blue-600 rounded mr-3"></div>
+                                    <span className="text-gray-700">FONT TYPE</span>
+                                </div>
+                                <span className="text-gray-700">Open Sans</span>
+
+                                 <h3 className="text-xl font-semibold text-blue-700 mb-4">FONT SIZE</h3>
+                                <div className="flex items-center">
+                                    <div className="w-8 h-8 bg-blue-600 rounded mr-3"></div>
+                                    <span className="text-gray-700">body text 12 points,
+                                        headings: 15 points, captions: 10 points, 
+                                        titles: 18 points, banners/Big postals: As it fits the size of the Banner/Postal</span>
+                                </div>
+                                
                             </div>
 
                             <div>
-                                <h3 className="text-xl font-semibold text-blue-700 mb-4">Contact Information</h3>
+                                <h3 className="text-xl font-semibold text-blue-700 mb-4">CONTACT INFORMATION</h3>
                                 <div className="space-y-3">
                                     <div className="flex items-start">
                                         <Building2 className="h-5 w-5 text-blue-600 mr-3 mt-1" />
                                         <div>
-                                            <p className="font-medium text-gray-800">Office Address</p>
-                                            <p className="text-gray-600">Block F1 Fashar Shopping Complex, Behind Hassan Gas Maduganari By-pass</p>
+                                            <p className="font-medium text-gray-800">OFFICIAL ADDRESS</p>
+                                            <p className="text-gray-600">N0. 6 Off ‭Damboa Road, Opp. Mafoni liberty Pri. sch., 
+                                                Beside Armani Event centre, Maiduguri, Borno state</p>
                                         </div>
                                     </div>
 
@@ -72,7 +89,7 @@ const Governance = () => {
                                         <Globe className="h-5 w-5 text-blue-600 mr-3" />
                                         <div>
                                             <p className="font-medium text-gray-800">Email</p>
-                                            <p className="text-gray-600">hom@firstmission.org.ng</p>
+                                            <p className="text-gray-600">hom@firstmission-org.ng</p>
                                         </div>
                                     </div>
 
@@ -91,7 +108,7 @@ const Governance = () => {
 
                 {/* Governance Structure */}
                 <section className="mb-16">
-                    <h2 className="text-3xl font-bold text-blue-800 mb-8 text-center">Governance Structure</h2>
+                    <h2 className="text-3xl font-bold text-blue-800 mb-8 text-center">GOVERNANCE STRUCTURE</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {governanceInfo.map((info, index) => (
                             <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
@@ -108,17 +125,17 @@ const Governance = () => {
                     <div className="bg-white rounded-lg shadow-lg p-8">
                         <div className="flex items-center mb-6">
                             <Users className="h-8 w-8 text-blue-600 mr-3" />
-                            <h2 className="text-3xl font-bold text-blue-800">Board of Directors</h2>
+                            <h2 className="text-3xl font-bold text-blue-800">BOARD OF DIRECTORS</h2>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div>
-                                <h3 className="text-xl font-semibold text-blue-700 mb-4">Governance Structure</h3>
+                                <h3 className="text-xl font-semibold text-blue-700 mb-4">GOVERNANCE STRUCTURE</h3>
                                 <p className="text-gray-700 mb-4">
                                     The Board of Directors serves as the highest governing body of FIRST MISSION, providing strategic oversight
                                     and ensuring the organization fulfills its humanitarian mandate effectively and ethically.
                                 </p>
                                 <div className="bg-blue-50 p-4 rounded-lg">
-                                    <h4 className="font-semibold text-blue-800 mb-2">Key Responsibilities</h4>
+                                    <h4 className="font-semibold text-blue-800 mb-2">KEY RESPONSIBILITIES</h4>
                                     <ul className="text-gray-700 space-y-1">
                                         <li>• Strategic planning and oversight</li>
                                         <li>• Financial governance and accountability</li>
@@ -130,12 +147,12 @@ const Governance = () => {
                             </div>
 
                             <div>
-                                <h3 className="text-xl font-semibold text-blue-700 mb-4">Meeting Procedures</h3>
+                                <h3 className="text-xl font-semibold text-blue-700 mb-4">MEETING PROCEDURES</h3>
                                 <div className="space-y-4">
                                     <div className="flex items-center p-3 bg-gray-50 rounded-lg">
                                         <Calendar className="h-6 w-6 text-blue-600 mr-3" />
                                         <div>
-                                            <p className="font-medium text-gray-800">Tenure</p>
+                                            <p className="font-medium text-gray-800">TENURE</p>
                                             <p className="text-gray-600">5 Years</p>
                                         </div>
                                     </div>
@@ -143,7 +160,7 @@ const Governance = () => {
                                     <div className="flex items-center p-3 bg-gray-50 rounded-lg">
                                         <Vote className="h-6 w-6 text-blue-600 mr-3" />
                                         <div>
-                                            <p className="font-medium text-gray-800">Quorum</p>
+                                            <p className="font-medium text-gray-800">QUORUM</p>
                                             <p className="text-gray-600">1/3 Majority or Simple Majority</p>
                                         </div>
                                     </div>
@@ -158,7 +175,7 @@ const Governance = () => {
                     <div className="bg-white rounded-lg shadow-lg p-8">
                         <div className="flex items-center mb-6">
                             <DollarSign className="h-8 w-8 text-blue-600 mr-3" />
-                            <h2 className="text-3xl font-bold text-blue-800">Sources of Income</h2>
+                            <h2 className="text-3xl font-bold text-blue-800">SOURCES OF INCOME</h2>
                         </div>
                         <p className="text-gray-600 mb-6">
                             FIRST MISSION maintains financial sustainability through diverse funding sources, ensuring independence
@@ -179,7 +196,7 @@ const Governance = () => {
                 <section>
                     <div className="bg-blue-50 rounded-lg p-8 text-center">
                         <Shield className="h-16 w-16 text-blue-600 mx-auto mb-6" />
-                        <h2 className="text-3xl font-bold text-blue-800 mb-4">Commitment to Transparency</h2>
+                        <h2 className="text-3xl font-bold text-blue-800 mb-4">COMMITMENT TO TRANSPERENCY</h2>
                         <p className="text-lg text-gray-600 max-w-4xl mx-auto mb-6">
                             FIRST MISSION is committed to maintaining the highest standards of transparency, accountability,
                             and ethical governance in all our operations. We believe that good governance is fundamental
@@ -188,17 +205,17 @@ const Governance = () => {
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
                             <div className="text-center">
                                 <FileText className="h-12 w-12 text-blue-600 mx-auto mb-3" />
-                                <h3 className="font-semibold text-blue-800 mb-2">Financial Transparency</h3>
+                                <h3 className="font-semibold text-blue-800 mb-2">FINANCIAL TRANSPERENCY</h3>
                                 <p className="text-gray-600">Regular financial reporting and audits</p>
                             </div>
                             <div className="text-center">
                                 <Users className="h-12 w-12 text-blue-600 mx-auto mb-3" />
-                                <h3 className="font-semibold text-blue-800 mb-2">Stakeholder Engagement</h3>
+                                <h3 className="font-semibold text-blue-800 mb-2">STAKEHOLDERS ENGAGEMENT</h3>
                                 <p className="text-gray-600">Active participation in decision-making</p>
                             </div>
                             <div className="text-center">
                                 <Shield className="h-12 w-12 text-blue-600 mx-auto mb-3" />
-                                <h3 className="font-semibold text-blue-800 mb-2">Ethical Standards</h3>
+                                <h3 className="font-semibold text-blue-800 mb-2">ETHICAL STANDARDS</h3>
                                 <p className="text-gray-600">Adherence to humanitarian principles</p>
                             </div>
                         </div>
