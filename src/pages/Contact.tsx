@@ -64,9 +64,10 @@ const Contact = () => {
                                     <div>
                                         <h3 className="font-semibold text-blue-100">Our Office</h3>
                                         <p className="text-blue-200">
-                                            1234 Charity Street<br />
-                                            City, State 12345<br />
-                                            Country
+                                            N0. 6 Off ‭Damboa Road, Opp. 
+                                            Mafoni liberty Pri. sch., 
+                                            Beside Armani Event centre, 
+                                            Maiduguri, Borno state
                                         </p>
                                     </div>
                                 </div>
@@ -76,8 +77,8 @@ const Contact = () => {
                                     <div>
                                         <h3 className="font-semibold text-blue-100">Phone</h3>
                                         <p className="text-blue-200">
-                                            Main: +1 (555) 123-4567<br />
-                                            Toll-Free: 1-800-123-4567
+                                            +234 816 631 5323 <br />
+                                            +234 0902 907 3561
                                         </p>
                                     </div>
                                 </div>
@@ -87,8 +88,7 @@ const Contact = () => {
                                     <div>
                                         <h3 className="font-semibold text-blue-100">Email</h3>
                                         <p className="text-blue-200">
-                                            info@firstmission.org<br />
-                                            support@firstmission.org
+                                            hom@firstmission-ng.org
                                         </p>
                                     </div>
                                 </div>
@@ -98,8 +98,7 @@ const Contact = () => {
                                     <div>
                                         <h3 className="font-semibold text-blue-100">Working Hours</h3>
                                         <p className="text-blue-200">
-                                            Monday - Friday: 9:00 AM - 5:00 PM<br />
-                                            Saturday: 10:00 AM - 2:00 PM<br />
+                                            Monday - Friday: 8:00 AM - 5:00 PM<br />
                                             Sunday: Closed
                                         </p>
                                     </div>
@@ -141,7 +140,7 @@ const Contact = () => {
                                             value={formData.name}
                                             onChange={handleChange}
                                             required
-                                            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-0 focus:border-blue-500"
                                         />
                                     </div>
 
