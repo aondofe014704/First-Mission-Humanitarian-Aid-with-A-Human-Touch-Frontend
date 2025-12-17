@@ -4,39 +4,40 @@ const Gallery = () => {
     const galleryItems = [
         {
             id: 1,
-            title: 'Community Health Outreach',
-            description: 'Our health outreach program provides essential medical services and health education to underserved communities, ensuring access to quality healthcare for all.',
-            image: 'https://placehold.co/600x400/1e40af/ffffff?text=Community+Health+Outreach'
+            title: 'Leaving No One Behind: Inclusive GBV and SRH Engagement in Mashimari Ward',
+            description: 'FIRST MISSION Initiated program activities at Mashimari community,    Mashimari ward, Jere LGA, Borno state with women and the most marginalized, and people with disabilities on GBV, SRH, protection and Livelihood interventions.',
+            image: 'https://res.cloudinary.com/dejlekubm/image/upload/v1765027493/storys/nupepkecpxcq5lsxlc4w.png'
         },
         {
             id: 2,
-            title: 'Women Empowerment Workshop',
-            description: 'Empowering women through skill-building workshops and leadership training to foster independence and create sustainable change in their communities.',
-            image: 'https://placehold.co/600x400/1e40af/ffffff?text=Women+Empowerment+Workshop'
+            title: 'Leadership Engagement on Gender-Based Violence, SRH, and Protection in Mashimari Ward',
+            description: 'The inaugural mission team convened with the leaders of mashimari ward, for a dialogue on critical issues, specifically gender‑based violence (GBV), sexual and reproductive health (SRH), and protection concerns.',
+            image: 'https://res.cloudinary.com/dejlekubm/image/upload/v1765934492/Screenshot_2025-12-17_022101_zmvffn.png'
         },
         {
             id: 3,
-            title: 'Youth Education Support Program',
-            description: 'Supporting the education of young minds through scholarships, school supplies, and mentorship programs to build a brighter future.',
-            image: 'https://placehold.co/600x400/1e40af/ffffff?text=Youth+Education+Support'
+            title: 'Commencement of Community-Based GBV and SRH Protection Activities',
+            description: 'The inaugural mission team that visited the Mashimari ward, Jere LGA, Borno state as part of the program activities.',
+            image: 'https://res.cloudinary.com/dejlekubm/image/upload/v1765934209/Screenshot_2025-12-16_204656_lvzkem.png'
         },
         {
             id: 4,
-            title: 'Food & Relief Distribution',
-            description: 'Providing essential food supplies and relief materials to vulnerable communities affected by crises and natural disasters.',
-            image: 'https://placehold.co/600x400/1e40af/ffffff?text=Food+%26+Relief+Distribution'
+            title: 'Inaugural Mission Dialogue with Women and Girls Living with Disabilities',
+            description: 'During the inaugural mission, a dedicated session was convened with women and girls living with disabilities in the community. The purpose of the session is to elucidate the significance of preventing protection especially Child Protection, GBV, provision of inclusive SRH, Livelihood linking to providing practical guidance on issues of gender‑based violence (GBV), promoting sexual and reproductive health (SRH), and safeguarding the rights and protection of all women and girls.',
+            image: 'https://res.cloudinary.com/dejlekubm/image/upload/v1765936896/Screenshot_2025-12-17_030103_jirg0w.png'
+            
         },
         {
             id: 5,
-            title: 'Community Clean-Up & Sanitation Drive',
-            description: 'Promoting hygiene and environmental sustainability through community clean-up initiatives and sanitation awareness programs.',
-            image: 'https://placehold.co/600x400/1e40af/ffffff?text=Clean-Up+%26+Sanitation'
+            title: 'Together in Purpose: Strengthening Community Solidarity for Rights and Inclusion',
+            description: 'In a spirit of unity and shared purpose, community leaders, the inaugural FIRST MISSION team, and persons with disabilities converged in harmonious collaboration during the closing session. The gathering was marked by joyous celebration and the exchange of hopeful reflections, reaffirming a collective commitment to advancing the rights and wellbeing of all community members.',
+            image: 'https://res.cloudinary.com/dejlekubm/image/upload/v1765937493/Screenshot_2025-12-17_031043_jlfo2s.png'
         },
         {
             id: 6,
-            title: 'Agricultural & Livelihood Support',
-            description: 'Supporting sustainable agriculture and livelihood programs to enhance food security and economic stability in rural communities.',
-            image: 'https://placehold.co/600x400/1e40af/ffffff?text=Agricultural+Support'
+            title: 'FIRST MISSION Research to Advance Protection and Health Equity',
+            description: 'The inaugural FIRST MISSION team is embarking on a critical research initiative focused on Gender-Based Violence (GBV), Sexual and Reproductive Health (SRH), and protection concerns. This endeavor seeks to gather evidence and insights to inform targeted, survivor-centered interventions that prioritize the safety, dignity, and well-being of vulnerable populations. By addressing these pressing issues, the team aims to contribute to a more protective and equitable environment, fostering resilience and access to essential services for those affected. The research will guide strategic partnerships and programming to amplify impact in safeguarding human rights and promoting health equity.',
+            image: 'https://res.cloudinary.com/dejlekubm/image/upload/v1765938733/Screenshot_2025-12-17_033148_areocf.png'
         }
     ];
 
@@ -46,7 +47,7 @@ const Gallery = () => {
                 <div className="text-center mb-12">
                     <h1 className="text-4xl font-bold text-blue-900 mb-4 uppercase">OUR GALLERY</h1>
                     <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                        Explore our impactful programs and initiatives that are making a difference in communities around the world.
+                        Explore the impactful programs and initiatives of the inaugural FIRST MISSION team, from community engagements with women, girls, and persons with disabilities, to research-driven interventions addressing Gender-Based Violence (GBV), Sexual and Reproductive Health (SRH), and protection concerns. Through inclusive dialogues, evidence-gathering, and collaborative partnerships, these efforts are fostering safer, more equitable communities, promoting health and wellbeing, and safeguarding the rights and dignity of vulnerable populations around the world.
                     </p>
                 </div>
 
