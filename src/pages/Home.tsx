@@ -1,6 +1,7 @@
 // import { useNavigate } from 'react-router-dom';
 import { Users, Target, HandHeart } from 'lucide-react';
-import StoriesSection from './StoriesSection';
+// import StoriesSection from './StoriesSection';
+import Carousel from './Carousel'
 
 export default function Home() {
     // const navigate = useNavigate();
@@ -41,8 +42,8 @@ export default function Home() {
             {/*    </div>*/}
             {/*</section>*/}
 
-            <StoriesSection />
-
+            {/*<StoriesSection />*/}
+            <Carousel />
             {/* Mission Overview */}
             <section className="py-16 px-4 bg-gray-50">
                 <div className="max-w-7xl mx-auto">
