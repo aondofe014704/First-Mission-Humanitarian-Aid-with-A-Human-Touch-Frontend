@@ -14,8 +14,12 @@ const NavBar = () => {
         { name: 'About Us', href: '/about' },
         { name: 'Organogram', href: '/organogram' },
         { name: 'Governance', href: '/governance' },
-        { name: 'Program', href: '/programs' }
+        { name: 'Program', href: '/programs' },
+        { name: 'Gallery', href: '/gallery' },
+        { name: 'Resources', href: '/resources' },
+        { name: 'Contact Us', href: '/contact' }
     ];
+    
 
     return (
         <nav className="bg-blue-900 shadow-lg sticky top-0 z-50">
@@ -36,7 +40,7 @@ const NavBar = () => {
 
                     {/* Desktop Navigation */}
                     <div className="hidden lg:flex items-center space-x-8">
-                        <ul className="flex space-x-8">
+                        <ul className="flex space-x-8 items-center">
                             {navItems.map((item) => (
                                 <li key={item.name}>
                                     <Link
@@ -101,6 +105,7 @@ const NavBar = () => {
                                 </Link>
                             </li>
                         ))}
+                       
                     </ul>
 
                     {/* Mobile Actions */}

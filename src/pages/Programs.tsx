@@ -82,7 +82,7 @@ const Programs = () => {
             <header className="bg-blue-800 text-white py-16">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <Briefcase className="h-16 w-16 mx-auto mb-6" />
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Programs</h1>
+                    <h1 className="text-4xl md:text-5xl font-bold mb-4">OUR PROGRAMS</h1>
                     <p className="text-xl text-blue-200 max-w-3xl mx-auto">
                         Comprehensive humanitarian and development programs addressing the needs of vulnerable populations
                     </p>
@@ -95,7 +95,7 @@ const Programs = () => {
             <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 {/* Introduction */}
                 <section className="mb-16 text-center">
-                    <h2 className="text-3xl font-bold text-blue-800 mb-6">What We Do</h2>
+                    <h2 className="text-3xl font-bold text-blue-800 mb-6">WHAT WE DO</h2>
                     <p className="text-lg text-gray-600 max-w-4xl mx-auto">
                         FIRST MISSION delivers comprehensive programs across 12 key areas, focusing on protection, health, nutrition,
                         women's empowerment, education, and sustainable development. Our programs are designed to address both immediate
@@ -132,7 +132,7 @@ const Programs = () => {
 
                 {/* Call to Action */}
                 <section className="mt-16 bg-blue-50 rounded-lg p-8 text-center">
-                    <h2 className="text-3xl font-bold text-blue-800 mb-4">Join Our Mission</h2>
+                    <h2 className="text-3xl font-bold text-blue-800 mb-4">JOIN OUR MISSION</h2>
                     <p className="text-lg text-gray-600 mb-6 max-w-3xl mx-auto">
                         Together, we can create lasting change in the lives of vulnerable populations across Nigeria.
                         Your support helps us deliver comprehensive programs that address immediate needs while building
