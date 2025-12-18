@@ -1,68 +1,6 @@
 import  { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-
-const carouselData = [
-    {
-        id: 1,
-        image: '/firstmission.png',
-        title: 'First Mission Accomplished',
-        description: 'Our inaugural project delivered exceptional results, setting new standards for innovation and excellence in the industry.'
-    },
-    {
-        id: 2,
-        image: '/firstmission.png',
-        title: 'Breaking New Ground',
-        description: 'Pioneering solutions that transform challenges into opportunities, pushing boundaries with cutting-edge technology.'
-    },
-    {
-        id: 3,
-        image: '/firstmission.png',
-        title: 'Vision Meets Reality',
-        description: 'Turning ambitious ideas into tangible success stories through dedication, expertise, and unwavering commitment.'
-    },
-    {
-        id: 4,
-        image: '/firstmission.png',
-        title: 'Innovation Unleashed',
-        description: 'Harnessing creativity and technical prowess to deliver solutions that exceed expectations and drive growth.'
-    },
-    {
-        id: 5,
-        image: '/firstmission.png',
-        title: 'Excellence Delivered',
-        description: 'Premium quality and attention to detail in every aspect, ensuring outstanding results that speak for themselves.'
-    },
-    {
-        id: 6,
-        image: '/firstmission.png',
-        title: 'Future Forward',
-        description: 'Embracing tomorrow\'s possibilities today with forward-thinking strategies and revolutionary approaches.'
-    },
-    {
-        id: 7,
-        image: '/firstmission.png',
-        title: 'Success Stories',
-        description: 'Building a legacy of achievement through collaboration, innovation, and relentless pursuit of perfection.'
-    },
-    {
-        id: 8,
-        image: '/firstmission.png',
-        title: 'Transformative Journey',
-        description: 'Every milestone represents growth, learning, and the continuous evolution of our capabilities and vision.'
-    },
-    {
-        id: 9,
-        image: '/firstmission.png',
-        title: 'Bold Achievements',
-        description: 'Celebrating victories both big and small, each one a testament to teamwork and strategic excellence.'
-    },
-    {
-        id: 10,
-        image: '/firstmission.png',
-        title: 'Endless Possibilities',
-        description: 'The journey continues with unlimited potential, driven by passion, purpose, and unwavering determination.'
-    }
-];
+import {carouselData} from "./carouselData";
 
 export default function Carousel() {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -94,7 +32,7 @@ export default function Carousel() {
         }, 500);
     };
 
-    const goToSlide = (index) => {
+    const goToSlide = (index: any) => {
         if (isTransitioning || index === currentIndex) return;
         setIsTransitioning(true);
         setTimeout(() => {
