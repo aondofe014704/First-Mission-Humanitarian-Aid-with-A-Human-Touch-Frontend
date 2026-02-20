@@ -1,75 +1,69 @@
-import { Shield, Heart, Apple, Users, Droplets, GraduationCap, Briefcase, Search, Wheat, Leaf, TreePine, Handshake } from 'lucide-react';
+import { Shield, Apple, Users, Droplets, GraduationCap, Briefcase, Search, Wheat, Leaf, TreePine, Handshake } from 'lucide-react';
 
 const Programs = () => {
     const programs = [
         {
-            title: 'Protection',
+            title: 'PROTECTION',
             icon: Shield,
-            description: 'In Nigeria\'s complex protection environment, marked by displacement, insurgencies, communal crises, poverty, and economic hardship, vulnerable populations face significant risks. Women, children, and adolescent girls are disproportionately affected, requiring targeted protection interventions.',
+            description: 'In Nigeria\'s complex protection environment, marked by displacement, insurgencies, communal crises, poverty, and economic hardship, vulnerable populations face significant risks. Women, children, and adolescent girls are disproportionately affected, requiring targeted protection interventions. The organization\'s protection efforts focus on ensuring safety and security for these groups, addressing specific needs and vulnerabilities. This includes providing support and services to mitigate the impact of violence, exploitation, and abuse. By prioritizing protection, the organization aims to safeguard the well-being and dignity of vulnerable populations in Nigeria engaging in sub-activities like GBV, Child protection, mine actions, land, property and for the displaced persons. Another component of protection which is addressed by FIRST MISSION is Promoting gender equality, women\'s rights, and economic empowerment/social protection to women and adolescent girls affected by humanitarian crisis. We engage in creating opportunities for women to gain independence, confidence, and decision-making abilities. our programs address issues such as gender-based violence, economic inequality, and access to education and healthcare. By targeting vulnerable populations, we will aim to reduce disparities and promote inclusivity, ultimately contributing to a more equitable Nigeria. Through advocacy and support, the programs seek to create lasting positive change for women and vulnerable groups.',
             activities: ['GBV (Gender-Based Violence)', 'Child Protection', 'Mine Actions', 'Land and Property Rights', 'Support for Displaced Persons']
         },
         {
-            title: 'Health',
-            icon: Heart,
-            description: 'In Nigeria\'s emergency contexts, the organization delivers essential healthcare services to vulnerable populations. Women, children, and adolescent girls face heightened health risks, including sexual and reproductive health (SRH) issues, maternal health complications, and health consequences of sexual and gender-based violence (SGBV).',
-            activities: ['Sexual and Reproductive Health (SRH)', 'Maternal Health', 'Mental Health and Psychosocial Support (MHPSS)', 'Medical Care', 'Health Education']
-        },
-        {
-            title: 'Nutrition',
+            title: 'HEALTH/ NUTRITION',
             icon: Apple,
-            description: 'In emergency contexts like Nigeria\'s Northeast, Northwest, and Northcentral regions, the organization addresses malnutrition through targeted nutrition interventions. These initiatives include promoting Mother, Infant, and Young Child Feeding (MIYCF) practices.',
+            description: 'In Nigeria\'s emergency contexts, the organization delivers essential healthcare services to vulnerable populations. Women, children, and adolescent girls face heightened health risks, including sexual and reproductive health (SRH) issues, maternal health complications, and health consequences of sexual and gender-based violence (SGBV). Mental health and psychosocial support (MHPSS), HIV/AID/Tuberculosis (TB)/Malaria, and other tropical/neglected diseases are also critical concerns, as survivors of violence and displacement often experience trauma. The organization\'s health initiatives aim to address these complex needs, providing medical care, health education, and psychosocial support. the organization also, addresses malnutrition through targeted nutrition interventions. These initiatives include promoting Mother, Infant, and Young Child Feeding (MIYCF) practices, managing Moderate Acute Malnutrition (MAM), and treating Severe Acute Malnutrition (SAM). The organization prioritizes localized approaches, such as using Tom Brown (a nutrient-rich blend of grains and legumes) for treatment, and collaborates with local structures to ensure sustainability. Cash and Voucher Assistance (CVA) is also integrated to support access to nutritious food. By addressing malnutrition, the organization aims to reduce child mortality, improve maternal health, and enhance overall well-being in crisis-affected communities. By responding to these health/nutrition challenges, the organization seeks to improve overall well-being and resilience among affected communities.',
             activities: ['Mother, Infant, and Young Child Feeding (MIYCF)', 'Moderate Acute Malnutrition (MAM) Management', 'Severe Acute Malnutrition (SAM) Treatment', 'Tom Brown Nutrition Program', 'Cash and Voucher Assistance (CVA)']
         },
         {
-            title: 'Women Empowerment and Advocacy',
+            title: 'WOMEN EMPOWERMENT AND ADVOCACY',
             icon: Users,
-            description: 'Promoting gender equality, women\'s rights, and economic empowerment to women and adolescent girls affected by humanitarian crisis. We engage in creating opportunities for women to gain independence, confidence, and decision-making abilities.',
+            description: 'Promoting gender equality, women\'s rights, and economic empowerment/social protection to women and adolescent girls affected by humanitarian crisis. We engage in creating opportunities for women to gain independence, confidence, and decision-making abilities. our programs address issues such as gender-based violence, economic inequality, and access to education and healthcare. By targeting vulnerable populations, we will aim to reduce disparities and promote inclusivity, ultimately contributing to a more equitable Nigeria. Through advocacy and support, the programs seek to create lasting positive change for women and vulnerable groups.',
             activities: ['Economic Empowerment', 'Vocational Training', 'Entrepreneurship Support', 'Gender-Based Violence Prevention', 'Advocacy and Rights Protection']
         },
         {
-            title: 'WASH, NFI/MPCA',
+            title: 'WASH (WATER, SANITATION, AND HYGIENE), NFI/MPCA',
             icon: Droplets,
-            description: 'Humanitarian Mission provides critical WASH services, including access to clean water, sanitation facilities, and hygiene promotion, in response to climate-related disasters like flooding, fire outbreaks and conflict-induced displacement.',
+            description: 'Humanitarian Mission provides critical WASH services, including access to clean water, sanitation facilities, and hygiene promotion, in response to climate-related disasters like flooding, fire outbreaks and conflict-induced displacement. In Northwest, Northeast, and Northcentral Nigeria, where WASH infrastructure has been damaged or destroyed, the organization\'s tailored interventions aim to restore access to essential services. Non-Food Items (NFIs) and Multi-Purpose Cash Assistance (MPCA) are integrated into WASH programming to support vulnerable populations. By promoting hygiene practices and providing WASH services, the organization seeks to reduce water-borne illnesses and improve overall health outcomes. Ultimately, the goal is to enhance resilience and well-being in communities affected by conflict and climate-related shocks.',
             activities: ['Clean Water Access', 'Sanitation Facilities', 'Hygiene Promotion', 'Non-Food Items (NFIs)', 'Multi-Purpose Cash Assistance (MPCA)']
         },
         {
-            title: 'Education',
+            title: 'EDUCATION',
             icon: GraduationCap,
-            description: 'The organization prioritizes education as a crucial aspect of development, focusing on improving access to quality education and vocational training. This includes initiatives to promote literacy, numeracy to disadvantaged children.',
+            description: 'The organization prioritizes education as a crucial aspect of development, focusing on improving access to quality education and vocational training. This includes initiatives to promote literacy, numeracy to un advantaged children and equip parents/caregivers with skills/livelihood necessary for longer sustainability, future opportunities for both children and communities where we operate especially in emergency situations and poverty encroached communities, the organization delivers Education in Emergencies (EiE) services, ensuring continuity of learning despite challenging circumstances. By integrating various education strategies, the organization addresses both immediate needs and long-term development goals. Ultimately, the goal is to empower individuals and communities through education, fostering resilience and sustainable growth.',
             activities: ['Education in Emergencies (EiE)', 'Literacy and Numeracy Programs', 'Vocational Training', 'Skills Development', 'Educational Infrastructure']
         },
         {
-            title: 'Career Development',
+            title: 'CAREER DEVELOPMENT',
             icon: Briefcase,
             description: 'Humanitarian Mission\'s Career Development program empowers youth with essential skills, mentorship, and guidance to pursue careers in international development and aid support, particularly in emergency contexts.',
             activities: ['Youth Skills Development', 'Mentorship Programs', 'Career Guidance', 'Leadership Training', 'Capacity Building']
         },
         {
-            title: 'Research for International Development',
+            title: 'RESEARCH FOR INTERNATIONAL DEVELOPMENT',
             icon: Search,
             description: 'Humanitarian Mission\'s research efforts focus on generating evidence-based insights to inform development programs and policies, particularly in response to emerging humanitarian contexts.',
             activities: ['Needs Assessments', 'Policy Research', 'Best Practices Documentation', 'Impact Evaluation', 'Evidence-Based Programming']
         },
         {
-            title: 'Food Security and Sustainability',
+            title: 'FOOD SECURITY AND SUSTAINABILITY',
             icon: Wheat,
             description: 'The organization\'s Food Security and Sustainability (FSS) initiatives promote sustainable agriculture, address hunger, and support livelihood restoration in crisis-affected communities.',
             activities: ['Emergency Food Distribution', 'Agricultural Input Provision', 'Sustainable Agriculture', 'Social Protection', 'Nutrition Support']
         },
         {
-            title: 'Livelihood and Early Recovery',
+            title: 'LIVELIHOOD AND EARLY RECOVERY',
             icon: Leaf,
             description: 'These efforts aim to enhance food security, revive livelihoods, and build resilience among Internally Displaced Persons (IDPs) and host communities. By supporting economic recovery and livelihood restoration, the organization helps affected households regain stability.',
             activities: ['Livelihood Restoration', 'Economic Recovery', 'Skills Training', 'Income Generation', 'Community Resilience']
         },
         {
-            title: 'Climate Change and Sustainability',
+            title: 'CLIMATE CHANGE AND SUSTAINABILITY',
             icon: TreePine,
-            description: 'The Climate Change and Sustainability program promotes safe climate practices and encourages environmental sustainability in regions. The program addresses climate-related challenges, such as flooding, sandstorms, and fire outbreaks.',
+            description: 'The Climate Change and Sustainability program promotes safe climate practices and encourages environmental sustainability in regions. The program addresses climate-related challenges, such as flooding, sandstorms, and fire outbreaks, which exacerbate displacement and vulnerability. Through tailored interventions, the program aims to mitigate the impacts of climate change and promote sustainable environmental practices. By implementing climate-resilient solutions, the organization seeks to reduce risks and enhance adaptive capacities among communities. Ultimately, the goal is to contribute to a more sustainable and climate-resilient future for vulnerable populations and communities in the country. The organization\'s Climate Action will address Food Security and Sustainability (FSS) and Livelihood and recovery initiatives to promote sustainable agriculture, address hunger, and support livelihood restoration in human and climate crisis-affected communities. In response to climate-related disasters and conflict-induced displacement in Nigeria\'s Northwest, Northeast, and Northcentral regions, the organization prioritizes emergency food distribution, agricultural input provision, and social protection initiatives. These efforts aim to enhance food security, revive livelihoods, and build resilience among Internally Displaced Persons (IDPs) and host communities. By supporting economic recovery and livelihood restoration, the organization helps affected households and individuals regain stability and self-sufficiency. Ultimately, the goal is to improve food security, reduce vulnerability, and promote sustainable livelihoods in the face of humanitarian crises.',
             activities: ['Climate Adaptation', 'Environmental Sustainability', 'Disaster Risk Reduction', 'Green Practices', 'Climate Resilience']
         },
         {
-            title: 'Conflict Resolution and Peace Building',
+            title: 'CONFLICT RESOLUTION AND PEACE BUILDING',
             icon: Handshake,
             description: 'The Conflict Resolution and Peace Building program fosters conflict-free societies and promotes peaceful coexistence among diverse communities in Nigeria. In response to escalating crises, including displacements, insurgencies, and communal conflicts.',
             activities: ['Dialogue Facilitation', 'Community Mediation', 'Peace Education', 'Social Cohesion', 'Reconciliation Programs']
