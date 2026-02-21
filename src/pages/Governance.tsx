@@ -97,7 +97,7 @@ const Governance = () => {
                                         <Globe className="h-5 w-5 text-blue-600 mr-3" />
                                         <div>
                                             <p className="font-medium text-gray-800">Phone Numbers</p>
-                                            <p className="text-gray-600">+234 816 631 5323 | +234 0902 907 3561</p>
+                                            <p className="text-gray-600">+234 091 644 072 13</p>
                                         </div>
                                     </div>
                                 </div>
