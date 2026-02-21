@@ -176,7 +176,7 @@ const AboutUs = () => {
                 {/* Cross-Cutting Objectives */}
                 <section className="mb-16">
                     <div className="bg-blue-50 rounded-lg p-8">
-                        <h3 className="text-2xl font-semibold text-blue-800 mb-6 text-center">CROSS-CUTTING OBJECTIVES</h3>
+                        <h3 className="text-2xl font-semibold text-blue-800 mb-6 text-center">OUR TOP PRIORITY</h3>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div className="text-center">
                                 <Globe className="h-12 w-12 text-blue-600 mx-auto mb-3" />

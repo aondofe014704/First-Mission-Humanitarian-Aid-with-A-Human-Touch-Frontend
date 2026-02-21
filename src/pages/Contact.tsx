@@ -77,8 +77,7 @@ const Contact = () => {
                                     <div>
                                         <h3 className="font-semibold text-blue-100">Phone</h3>
                                         <p className="text-blue-200">
-                                            +234 816 631 5323 <br />
-                                            +234 0902 907 3561
+                                            +234 09164407213 <br />
                                         </p>
                                     </div>
                                 </div>
@@ -98,7 +97,7 @@ const Contact = () => {
                                     <div>
                                         <h3 className="font-semibold text-blue-100">Working Hours</h3>
                                         <p className="text-blue-200">
-                                            Monday - Friday: 8:00 AM - 5:00 PM<br />
+                                            Monday - Friday: 8:00 AM - 4:30 PM<br />
                                             Sunday: Closed
                                         </p>
                                     </div>

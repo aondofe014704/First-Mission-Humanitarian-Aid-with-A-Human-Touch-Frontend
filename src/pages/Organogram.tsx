@@ -16,7 +16,7 @@ interface OrganogramSectionProps {
 const Organogram = () => {
     const operationsStructure: OrgLevel[] = [
         { level: 1, title: "Board of Directors (BOD)", positions: ["Board of Directors"] },
-        { level: 2, title: "Executive Leadership", positions: ["Chief Executive Officer (CEO)"] },
+        { level: 2, title: "Executive Leadership", positions: ["Head Of Mission (HOM)"] },
         { level: 3, title: "Senior Management", positions: ["Country Programs and Operations Director"] },
         { level: 4, title: "Regional Leadership", positions: ["Regional Programs and Operations Directors"] },
         {
