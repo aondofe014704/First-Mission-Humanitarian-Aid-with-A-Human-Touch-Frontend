@@ -14,7 +14,7 @@ const NavBar = () => {
         { name: 'About Us', href: '/about' },
         { name: 'Organogram', href: '/organogram' },
         { name: 'Governance', href: '/governance' },
-        { name: 'Program', href: '/programs' },
+        { name: 'Programs', href: '/programs' },
         { name: 'Gallery', href: '/gallery' },
         { name: 'Resources', href: '/resources' },
         { name: 'Contact Us', href: '/contact' }

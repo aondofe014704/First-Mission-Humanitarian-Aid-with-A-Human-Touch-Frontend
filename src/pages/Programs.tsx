@@ -1,4 +1,4 @@
-import { Shield, Apple, Users, Droplets, GraduationCap, Briefcase, Search, Wheat, Leaf, TreePine, Handshake } from 'lucide-react';
+import { Shield, Apple, Droplets, GraduationCap, Briefcase, Wheat, TreePine } from 'lucide-react';
 
 const Programs = () => {
     const programs = [
@@ -15,12 +15,6 @@ const Programs = () => {
             activities: ['Mother, Infant, and Young Child Feeding (MIYCF)', 'Moderate Acute Malnutrition (MAM) Management', 'Severe Acute Malnutrition (SAM) Treatment', 'Tom Brown Nutrition Program', 'Cash and Voucher Assistance (CVA)']
         },
         {
-            title: 'WOMEN EMPOWERMENT AND ADVOCACY',
-            icon: Users,
-            description: 'Promoting gender equality, women\'s rights, and economic empowerment/social protection to women and adolescent girls affected by humanitarian crisis. We engage in creating opportunities for women to gain independence, confidence, and decision-making abilities. our programs address issues such as gender-based violence, economic inequality, and access to education and healthcare. By targeting vulnerable populations, we will aim to reduce disparities and promote inclusivity, ultimately contributing to a more equitable Nigeria. Through advocacy and support, the programs seek to create lasting positive change for women and vulnerable groups.',
-            activities: ['Economic Empowerment', 'Vocational Training', 'Entrepreneurship Support', 'Gender-Based Violence Prevention', 'Advocacy and Rights Protection']
-        },
-        {
             title: 'WASH (WATER, SANITATION, AND HYGIENE), NFI/MPCA',
             icon: Droplets,
             description: 'Humanitarian Mission provides critical WASH services, including access to clean water, sanitation facilities, and hygiene promotion, in response to climate-related disasters like flooding, fire outbreaks and conflict-induced displacement. In Northwest, Northeast, and Northcentral Nigeria, where WASH infrastructure has been damaged or destroyed, the organization\'s tailored interventions aim to restore access to essential services. Non-Food Items (NFIs) and Multi-Purpose Cash Assistance (MPCA) are integrated into WASH programming to support vulnerable populations. By promoting hygiene practices and providing WASH services, the organization seeks to reduce water-borne illnesses and improve overall health outcomes. Ultimately, the goal is to enhance resilience and well-being in communities affected by conflict and climate-related shocks.',
@@ -33,28 +27,10 @@ const Programs = () => {
             activities: ['Education in Emergencies (EiE)', 'Literacy and Numeracy Programs', 'Vocational Training', 'Skills Development', 'Educational Infrastructure']
         },
         {
-            title: 'CAREER DEVELOPMENT',
-            icon: Briefcase,
-            description: 'Humanitarian Mission\'s Career Development program empowers youth with essential skills, mentorship, and guidance to pursue careers in international development and aid support, particularly in emergency contexts.',
-            activities: ['Youth Skills Development', 'Mentorship Programs', 'Career Guidance', 'Leadership Training', 'Capacity Building']
-        },
-        {
-            title: 'RESEARCH FOR INTERNATIONAL DEVELOPMENT',
-            icon: Search,
-            description: 'Humanitarian Mission\'s research efforts focus on generating evidence-based insights to inform development programs and policies, particularly in response to emerging humanitarian contexts.',
-            activities: ['Needs Assessments', 'Policy Research', 'Best Practices Documentation', 'Impact Evaluation', 'Evidence-Based Programming']
-        },
-        {
-            title: 'FOOD SECURITY AND SUSTAINABILITY',
+            title: 'FOOD SECURITY AND EARLY RECOVERY',
             icon: Wheat,
-            description: 'The organization\'s Food Security and Sustainability (FSS) initiatives promote sustainable agriculture, address hunger, and support livelihood restoration in crisis-affected communities.',
-            activities: ['Emergency Food Distribution', 'Agricultural Input Provision', 'Sustainable Agriculture', 'Social Protection', 'Nutrition Support']
-        },
-        {
-            title: 'LIVELIHOOD AND EARLY RECOVERY',
-            icon: Leaf,
-            description: 'These efforts aim to enhance food security, revive livelihoods, and build resilience among Internally Displaced Persons (IDPs) and host communities. By supporting economic recovery and livelihood restoration, the organization helps affected households regain stability.',
-            activities: ['Livelihood Restoration', 'Economic Recovery', 'Skills Training', 'Income Generation', 'Community Resilience']
+            description: 'In the volatile landscape of Northeast and other Regions in Nigeria specifically within the Borno, Adamawa, and Yobe (BAY) states, FIRST MISSION is dedicated to breaking the cycle of vulnerability through an integrated approach to Food Security and Early Recovery. Recognizing that conflict, climate-induced flooding, and economic instability disproportionately impact the most marginalized, we prioritize the immediate nutritional needs of children, women, and persons with disabilities while simultaneously laying the groundwork for sustainable self-reliance. By transitioning from emergency food assistance to early recovery initiatives such as climate-smart agricultural training, inclusive vocational skill-building, and the restoration of local markets we empower crisis-affected households to move beyond aid dependency. Our mission is to ensure that the recovery process is inherently inclusive, restoring not only the livelihoods but also the dignity and social equity of the region’s most vulnerable populations as they rebuild their futures.',
+            activities: ['Emergency Food Assistance (In-Kind and Cash/CVA)', 'Agriculture and Livelihood Support', 'Vocational Training and Income-Generating Activities (IGA)', 'Restoration of Basic Infrastructure and Services', 'Strengthening Local Governance and Social Cohesion (Village Savings and Loan Associations (VSLAs))']
         },
         {
             title: 'CLIMATE CHANGE AND SUSTAINABILITY',
@@ -62,12 +38,6 @@ const Programs = () => {
             description: 'The Climate Change and Sustainability program promotes safe climate practices and encourages environmental sustainability in regions. The program addresses climate-related challenges, such as flooding, sandstorms, and fire outbreaks, which exacerbate displacement and vulnerability. Through tailored interventions, the program aims to mitigate the impacts of climate change and promote sustainable environmental practices. By implementing climate-resilient solutions, the organization seeks to reduce risks and enhance adaptive capacities among communities. Ultimately, the goal is to contribute to a more sustainable and climate-resilient future for vulnerable populations and communities in the country. The organization\'s Climate Action will address Food Security and Sustainability (FSS) and Livelihood and recovery initiatives to promote sustainable agriculture, address hunger, and support livelihood restoration in human and climate crisis-affected communities. In response to climate-related disasters and conflict-induced displacement in Nigeria\'s Northwest, Northeast, and Northcentral regions, the organization prioritizes emergency food distribution, agricultural input provision, and social protection initiatives. These efforts aim to enhance food security, revive livelihoods, and build resilience among Internally Displaced Persons (IDPs) and host communities. By supporting economic recovery and livelihood restoration, the organization helps affected households and individuals regain stability and self-sufficiency. Ultimately, the goal is to improve food security, reduce vulnerability, and promote sustainable livelihoods in the face of humanitarian crises.',
             activities: ['Climate Adaptation', 'Environmental Sustainability', 'Disaster Risk Reduction', 'Green Practices', 'Climate Resilience']
         },
-        {
-            title: 'CONFLICT RESOLUTION AND PEACE BUILDING',
-            icon: Handshake,
-            description: 'The Conflict Resolution and Peace Building program fosters conflict-free societies and promotes peaceful coexistence among diverse communities in Nigeria. In response to escalating crises, including displacements, insurgencies, and communal conflicts.',
-            activities: ['Dialogue Facilitation', 'Community Mediation', 'Peace Education', 'Social Cohesion', 'Reconciliation Programs']
-        }
     ];
 
     return (
