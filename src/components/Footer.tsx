@@ -22,18 +22,27 @@ const Footer = () => {
                                 <img src="/catai.jpeg" alt="CATAI Partner" className="h-16 w-auto object-contain" />
                                 <img src="/ghiv.jpeg" alt="GHIV Partner" className="h-16 w-auto object-contain" />
                                 <img src="/cfci.png" alt="CFCI Partner" className="h-16 w-auto object-contain" />
+                                <img src="/albarka.jpeg" alt="Albarka Partner" className="h-16 w-auto object-contain" />
+                                <img src="/big.jpeg" alt="Big Partner" className="h-16 w-auto object-contain" />
+                                <img src="/cbt.jpeg" alt="CBT Partner" className="h-16 w-auto object-contain" />
                             </div>
                             <div className="flex space-x-12 mx-6">
                                 <img src="/casfod.jpeg" alt="CASFOD Partner" className="h-16 w-auto object-contain" />
                                 <img src="/catai.jpeg" alt="CATAI Partner" className="h-16 w-auto object-contain" />
                                 <img src="/ghiv.jpeg" alt="GHIV Partner" className="h-16 w-auto object-contain" />
                                 <img src="/cfci.png" alt="CFCI Partner" className="h-16 w-auto object-contain" />
+                                <img src="/albarka.jpeg" alt="Albarka Partner" className="h-16 w-auto object-contain" />
+                                <img src="/big.jpeg" alt="Big Partner" className="h-16 w-auto object-contain" />
+                                <img src="/cbt.jpeg" alt="CBT Partner" className="h-16 w-auto object-contain" />
                             </div>
                             <div className="flex space-x-12 mx-6">
                                 <img src="/casfod.jpeg" alt="CASFOD Partner" className="h-16 w-auto object-contain" />
                                 <img src="/catai.jpeg" alt="CATAI Partner" className="h-16 w-auto object-contain" />
                                 <img src="/ghiv.jpeg" alt="GHIV Partner" className="h-16 w-auto object-contain" />
                                 <img src="/cfci.png" alt="CFCI Partner" className="h-16 w-auto object-contain" />
+                                <img src="/albarka.jpeg" alt="Albarka Partner" className="h-16 w-auto object-contain" />
+                                <img src="/big.jpeg" alt="Big Partner" className="h-16 w-auto object-contain" />
+                                <img src="/cbt.jpeg" alt="CBT Partner" className="h-16 w-auto object-contain" />
                             </div>
                         </div>
                     </div>

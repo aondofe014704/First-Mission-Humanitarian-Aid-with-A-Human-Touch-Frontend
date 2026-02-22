@@ -28,16 +28,6 @@ const AboutUs = () => {
         'To mainstream climate change and environmental considerations into all programs and activities.'
     ];
 
-    const generalObjectives = [
-        'To respond promptly and effectively to humanitarian crises, including conflicts, natural disasters, and epidemics, in Nigeria.',
-        'To improve the health, nutrition, and well-being of vulnerable populations, particularly children, women, and people with disabilities.',
-        'To increase access to quality education and career development opportunities for disadvantaged children and youth.',
-        'To empower women and girls through economic and social empowerment programs.',
-        'To promote inclusive and sustainable development in Nigeria, with a focus on marginalized communities.',
-        'To prevent climate change effect in Nigeria and rebuild the effect/impact that brought about by climate crisis.',
-        'To achieve a free and safety communities, and reconstruction of communities after man-made crisis.'
-    ];
-
     return (
         <div className="min-h-screen bg-gray-50">
             {/*<header className="flex justify-center pt-10 pb-6">*/}
@@ -146,29 +136,14 @@ const AboutUs = () => {
                 {/* Aims and Objectives */}
                 <section className="mb-16">
                     <h2 className="text-3xl font-bold text-blue-800 mb-8 text-center">AIMS AND OBJECTIVES</h2>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                        <div className="bg-white rounded-lg shadow-lg p-8">
-                            <h3 className="text-2xl font-semibold text-blue-700 mb-6">MAIN OBJECTIVES</h3>
-                            <ul className="space-y-4">
-                                {objectives.map((objective, index) => (
-                                    <li key={index} className="flex items-start">
-                                        <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
-                                        <span className="text-gray-700">{objective}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-
-                        <div className="bg-white rounded-lg shadow-lg p-8">
-                            <h3 className="text-2xl font-semibold text-blue-700 mb-6">GENERAL OBJECTIVES</h3>
-                            <ul className="space-y-4">
-                                {generalObjectives.map((objective, index) => (
-                                    <li key={index} className="flex items-start">
-                                        <CheckCircle className="h-5 w-5 text-blue-500 mr-3 mt-1 flex-shrink-0" />
-                                        <span className="text-gray-700">{objective}</span>
-                                    </li>
-                                ))}
-                            </ul>
+                    <div className="bg-white rounded-lg shadow-lg p-8">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            {objectives.map((objective, index) => (
+                                <div key={index} className="flex items-start">
+                                    <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                                    <span className="text-gray-700 text-sm">{objective}</span>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </section>
@@ -176,7 +151,7 @@ const AboutUs = () => {
                 {/* Cross-Cutting Objectives */}
                 <section className="mb-16">
                     <div className="bg-blue-50 rounded-lg p-8">
-                        <h3 className="text-2xl font-semibold text-blue-800 mb-6 text-center">OUR TOP PRIORITY</h3>
+                        <h3 className="text-2xl font-semibold text-blue-800 mb-6 text-center">OUR TOP PRIORITIES</h3>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div className="text-center">
                                 <Globe className="h-12 w-12 text-blue-600 mx-auto mb-3" />
