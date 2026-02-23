@@ -170,7 +170,7 @@ const AboutUs = () => {
                             <div className="text-center">
                                 <Handshake className="h-12 w-12 text-blue-600 mx-auto mb-3" />
                                 <p className="text-gray-700 font-semibold">CO-CREATION WITH COMMUNITIES</p>
-                                <p className="text-gray-600 text-sm mt-2">FIRST MISSION contributes in alleviates human suffering in Northeast Nigeria by utilizing a co-creation model that empowers children, women, and people with disabilities to design their own pathways to recovery. By integrating local expertise with humanitarian aid, we ensure our interventions are inclusive, community driven, and sustainably transform vulnerability into shared resilience.</p>
+                                <p className="text-gray-600 text-sm mt-2">To empowers children, women, and people with disabilities to design their own pathways to recovery. By integrating local expertise with humanitarian aid, we ensure our interventions are inclusive, community driven, and sustainably transform vulnerability into shared resilience.</p>
                             </div>
                         </div>
                     </div>
