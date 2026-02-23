@@ -27,15 +27,7 @@ const NavBar = () => {
                 <div className="flex justify-between items-center h-16">
                     {/* Logo/Brand */}
                     <Link to="/" className="flex items-center">
-                        <img src="/logo.png" alt="First Mission Logo" className="h-8 w-8 mr-2" />
-                        <div className="text-white">
-                            <div className="text-base font-bold">
-                                First Mission
-                            </div>
-                            <div className="text-xs italic">
-                                "Humanitarian Aid with a Human Touch"
-                            </div>
-                        </div>
+                        <img src="/first.jpeg" alt="First Mission Logo" className="h-14 w-auto mr-3" />
                     </Link>
 
                     {/* Desktop Navigation */}

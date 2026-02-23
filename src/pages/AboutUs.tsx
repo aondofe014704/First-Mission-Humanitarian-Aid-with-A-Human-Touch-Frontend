@@ -1,4 +1,4 @@
-import { Heart, Target, Eye, Shield, Users, Globe, CheckCircle } from 'lucide-react';
+import { Heart, Target, Eye, Shield, Users, Globe, CheckCircle, Handshake } from 'lucide-react';
 
 const AboutUs = () => {
     const coreValues = [
@@ -151,7 +151,7 @@ const AboutUs = () => {
                 <section className="mb-16">
                     <div className="bg-blue-50 rounded-lg p-8">
                         <h3 className="text-2xl font-semibold text-blue-800 mb-6 text-center">OUR TOP PRIORITIES</h3>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                             <div className="text-center">
                                 <Globe className="h-12 w-12 text-blue-600 mx-auto mb-3" />
                                 <p className="text-gray-700">To mainstream climate change and environmental considerations 
@@ -166,6 +166,11 @@ const AboutUs = () => {
                                 <Heart className="h-12 w-12 text-blue-600 mx-auto mb-3" />
                                 <p className="text-gray-700">To ensure the inclusion and participation of people with 
                                     disabilities in all programs and activities.</p>
+                            </div>
+                            <div className="text-center">
+                                <Handshake className="h-12 w-12 text-blue-600 mx-auto mb-3" />
+                                <p className="text-gray-700 font-semibold">CO-CREATION WITH COMMUNITIES</p>
+                                <p className="text-gray-600 text-sm mt-2">FIRST MISSION contributes in alleviates human suffering in Northeast Nigeria by utilizing a co-creation model that empowers children, women, and people with disabilities to design their own pathways to recovery. By integrating local expertise with humanitarian aid, we ensure our interventions are inclusive, community driven, and sustainably transform vulnerability into shared resilience.</p>
                             </div>
                         </div>
                     </div>
