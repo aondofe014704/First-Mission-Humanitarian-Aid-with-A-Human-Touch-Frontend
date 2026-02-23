@@ -56,21 +56,20 @@ const AboutUs = () => {
                     <h2 className="text-3xl font-bold text-blue-800 mb-6 text-center">ORGANIZATION PROFILE</h2>
                     <div className="bg-white rounded-lg shadow-lg p-8">
                         <p className="text-lg text-gray-700 leading-relaxed">
-                            HUMANITY FIRST MISSION FOR CHILDREN WOMEN AND PEOPLE WITH DISABILITIES
-                             (FIRST MISSION) is a child-focused and women's rights organization registered
-                              in Nigeria in 2025, a humanitarian and developmental organization mandated 
-                              to respond to humanitarian crises, poverty encroachment, insurgencies, 
-                              climate change, and environmental issues across the country, with a specific 
-                              focus on the insurgent and poverty bedeviled communities in Nigeria. 
-                              Dedicated to ensuring child health, education, women's empowerment, 
-                              and gender equality, ending violence against women and girls, 
-                              FIRST MISSION delivers comprehensive programs in protection, health, 
-                              nutrition, women's empowerment, WASH/NFIs/MPCA, education, 
-                              career development, research for international development, 
-                              food security, livelihood/early recovery, climate change/sustainability, 
-                              and conflict resolution/Peace restoration and reconstruction  
-                              with a strong emphasis on inclusion for people with disabilities 
-                              and mainstreaming climate change considerations in all programming.
+                            HUMANITY FIRST MISSION FOR CHILDREN WOMEN AND PEOPLE WITH 
+                            DISABILITIES (FIRST MISSION) is a child-focused and women's 
+                            rights organization registered in Nigeria, FIRST MISSION is a 
+                            humanitarian and developmental organization mandated to respond 
+                            to humanitarian crises, poverty encroachment, insurgencies, 
+                            climate crisis, and environmental issues across the country, 
+                            with a specific focus to Children Women and PWDs. Dedicated to 
+                            ensuring child health, education, women's empowerment, and 
+                            gender equality towards ending violence against women and 
+                            adolescent girls, FIRST MISSION delivers comprehensive programs 
+                            in protection, health, nutrition, women's empowerment, WASH, 
+                            education, food security and livelihood/early recovery and 
+                            climate change/sustainability with a strong emphasis on 
+                            inclusivity for people with disabilities and mainstreaming.
                         </p>
                        
                     </div>
